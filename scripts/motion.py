@@ -88,13 +88,16 @@ parts.append(render("c1", 1.7, G, [
     Txt("en Mi Nación", MJ(124), Y, 80, 870, .52)], lambda fr, t: picado_anim(fr, t)))
 # 2. baile (sin texto)
 parts.append(clip(36.0, 2.2, T + "v1.mp4"))
-# 3. detalles de ofrendas (sin niños) con texto animado
-DET = (585, 1040, 247, 880)
-ov = render("o3", 3.5, None, [
+# 3. ofrendas: fotos originales del Drive en vertical (alta resolución), con movimiento
+OFR = [("1_altar_kinder", 1.0, (1.0, 1.10)), ("2_altar_primaria", 1.0, (1.10, 1.0)), ("3_cempasuchil", .8, (1.0, 1.12)), ("4_mesa", .8, (1.12, 1.0)), ("5_mesa2", .8, (1.0, 1.10))]
+ov = render("o3", sum(d for _, d, _ in OFR), None, [
     Txt("Ofrendas hechas", MJ(84), G, 80, 1210, .15, bg=C, pad=(34, 16)),
     Txt("por nuestros alumnos", MJ(84), G, 80, 1340, .3, bg=C, pad=(34, 16))])
-for k, s in enumerate([2.0, 3.6, 6.0, 9.5, 18.6]): clip(s, .7, T + f"d{k}.mp4", DET, .06)
-open(T + "d.txt", "w").write("".join(f"file '{T}d{k}.mp4'\n" for k in range(5)))
+for k, (nm, du, (z0, z1)) in enumerate(OFR):
+    im = Image.open(f"/home/claude/media/ofr/{nm}.jpg").convert("RGB").resize((Wr * 2, Hr * 2), Image.LANCZOS)
+    im.save(T + "st.png"); fr = int(du * FPS)
+    run(f"ffmpeg -v error -y -loop 1 -i {T}st.png -vf \"zoompan=z='{z0}+({z1}-{z0})*on/{fr}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={fr}:s={Wr}x{Hr}:fps={FPS},format=yuv420p\" -t {du} -c:v libx264 -preset veryfast -crf 18 {T}d{k}.mp4")
+open(T + "d.txt", "w").write("".join(f"file '{T}d{k}.mp4'\n" for k in range(len(OFR))))
 run(f"ffmpeg -v error -y -f concat -safe 0 -i {T}d.txt -c copy {T}dcat.mp4")
 run(f"ffmpeg -v error -y -i {T}dcat.mp4 -i {SELLO} -i {ov} -filter_complex \"[0][1]overlay={SX}:{SY}[a];[a][2]overlay=eof_action=pass,format=yuv420p\" -c:v libx264 -preset veryfast -crf 18 -an {T}v3.mp4")
 parts.append(T + "v3.mp4")
