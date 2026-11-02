@@ -171,12 +171,28 @@ def sparkle(d, cx, cy, r, fill):
 
 def mix(a, b, t): return tuple(int(x * (1 - t) + y * t) for x, y in zip(a, b))
 
+
+def heart(d, cx, cy, r, fill):
+    d.ellipse([cx - r, cy - r * .7, cx, cy + r * .3], fill=fill); d.ellipse([cx, cy - r * .7, cx + r, cy + r * .3], fill=fill)
+    d.polygon([(cx - r * .97, cy - r * .05), (cx + r * .97, cy - r * .05), (cx, cy + r * 1.05)], fill=fill)
+
+def smiley(d, cx, cy, r, fill, ink):
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=fill)
+    d.ellipse([cx - r * .42, cy - r * .35, cx - r * .22, cy - r * .1], fill=ink); d.ellipse([cx + r * .22, cy - r * .35, cx + r * .42, cy - r * .1], fill=ink)
+    d.arc([cx - r * .5, cy - r * .35, cx + r * .5, cy + r * .5], start=20, end=160, fill=ink, width=max(4, int(r * .1)))
+
+def pencil(im, x, y, L, ang, col):
+    lay = Image.new("RGBA", (L + 40, 60), (0, 0, 0, 0)); d = ImageDraw.Draw(lay)
+    d.rectangle([20, 14, L - 30, 46], fill=col); d.polygon([(L - 30, 14), (L + 10, 30), (L - 30, 46)], fill=(245, 222, 179)); d.polygon([(L - 2, 25), (L + 10, 30), (L - 2, 35)], fill=G)
+    d.rectangle([10, 14, 24, 46], fill=P)
+    lay = lay.rotate(ang, resample=Image.BICUBIC, expand=True); im.paste(lay, (x, y), lay)
+
 def deco(im, bg, acc, variant=0, top_only=False):
     """Decoración neutral inspirada en colegiominacion.com: sello, destellos, arcos y marca de agua."""
     Wi, Hi = im.size; d = ImageDraw.Draw(im)
     dark = bg in (G, B, P)
     line = mix(bg, C if dark else G, .18)
-    v = variant % 4
+    v = variant % 8
     if v == 0:   # arco grande arriba a la derecha + sello
         d.ellipse([Wi - 520, -380, Wi + 300, 440], outline=line, width=5)
         s = sello(dark, 170).rotate(-10, resample=Image.BICUBIC, expand=True); im.paste(s, (Wi - 250, 50), s)
@@ -190,6 +206,16 @@ def deco(im, bg, acc, variant=0, top_only=False):
         d.text((80, 60), "Aa", font=font(MIJA, 120), fill=line)
         s = sello(dark, 150).rotate(8, resample=Image.BICUBIC, expand=True); im.paste(s, (Wi - 230, 60), s)
         sparkle(d, 330, 110, 26, acc)
+    elif v == 4: # corazones del sello
+        heart(d, Wi - 170, 130, 52, P if bg != P else C); heart(d, Wi - 270, 90, 22, acc); sparkle(d, 120, 120, 30, acc)
+    elif v == 5: # carita feliz + destellos
+        smiley(d, Wi - 170, 150, 78, Y if bg != Y else C, G); sparkle(d, Wi - 300, 80, 22, acc); sparkle(d, 110, 120, 30, acc)
+    elif v == 6: # lápiz como en el sitio + sello
+        pencil(im, Wi - 470, 70, 330, -18, B if bg != B else Y); d = ImageDraw.Draw(im)
+        s = sello(dark, 130).rotate(-6, resample=Image.BICUBIC, expand=True); im.paste(s, (70, 50), s)
+    elif v == 7: # corazón + carita pequeños y arco
+        d.ellipse([Wi - 460, -300, Wi + 220, 380], outline=line, width=5)
+        smiley(d, Wi - 140, 120, 48, Y if bg != Y else C, G); heart(d, Wi - 250, 190, 30, P if bg != P else C); sparkle(d, 120, 110, 32, acc)
     else:        # dos arcos punteados + destellos
         for r in (260, 340):
             for k in range(0, 180, 6):

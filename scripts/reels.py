@@ -38,7 +38,6 @@ def end_card(): return end_card_safe()
 
 # ---- 02 recap cover ----
 os.makedirs(A + "02-reel-recap", exist_ok=True)
-L_reel_cover(Image.open("/home/claude/media/vid_15.5.jpg"), "Así se vivió el Día de Muertos", "Recap", (.5, .25)).save(A + "02-reel-recap/portada.jpg", quality=92)
 
 # ---- 08 preescolar reel ----
 if "08" in sys.argv or len(sys.argv) == 1:
