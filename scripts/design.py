@@ -151,3 +151,50 @@ def phone_frame(shot, h_target):
     ImageDraw.Draw(im).rounded_rectangle([20, 20, fw + 20, fh + 20], radius=60, fill=(22, 30, 27, 255))
     im.paste(shot, (20 + pad, 20 + pad), rmask(sw, h_target, 44))
     return im
+
+# ---------- elementos neutrales del sitio (para todo lo que no es Día de Muertos) ----------
+_sellos = {}
+def sello(dark_bg, w):
+    k = (dark_bg, w)
+    if k not in _sellos:
+        f = "/home/claude/zip/Entrega/png/ColgeioNacion--25.png" if dark_bg else "/home/claude/zip/Entrega/png/ColgeioNacion--24.png"
+        im = Image.open(f).convert("RGBA"); im = im.crop(im.getbbox()).resize((w, w), Image.LANCZOS)
+        _sellos[k] = im
+    return _sellos[k]
+
+def sparkle(d, cx, cy, r, fill):
+    pts = []
+    for k in range(8):
+        a = math.pi / 4 * k; rr = r if k % 2 == 0 else r * .28
+        pts.append((cx + rr * math.cos(a - math.pi / 2), cy + rr * math.sin(a - math.pi / 2)))
+    d.polygon(pts, fill=fill)
+
+def mix(a, b, t): return tuple(int(x * (1 - t) + y * t) for x, y in zip(a, b))
+
+def deco(im, bg, acc, variant=0, top_only=False):
+    """Decoración neutral inspirada en colegiominacion.com: sello, destellos, arcos y marca de agua."""
+    Wi, Hi = im.size; d = ImageDraw.Draw(im)
+    dark = bg in (G, B, P)
+    line = mix(bg, C if dark else G, .18)
+    v = variant % 4
+    if v == 0:   # arco grande arriba a la derecha + sello
+        d.ellipse([Wi - 520, -380, Wi + 300, 440], outline=line, width=5)
+        s = sello(dark, 170).rotate(-10, resample=Image.BICUBIC, expand=True); im.paste(s, (Wi - 250, 50), s)
+        sparkle(d, 120, 120, 34, acc); sparkle(d, 190, 70, 16, acc)
+    elif v == 1: # sol con rayos + destellos
+        cx, cy = Wi - 170, 150; d.ellipse([cx - 70, cy - 70, cx + 70, cy + 70], fill=Y if bg != Y else C)
+        for k in range(9):
+            a = math.pi * (1.05 + k * .11); d.line([(cx + 95 * math.cos(a), cy + 95 * math.sin(a)), (cx + 130 * math.cos(a), cy + 130 * math.sin(a))], fill=line if bg != Y else G, width=6)
+        sparkle(d, 110, 120, 30, acc)
+    elif v == 2: # "Aa" y garabato, como en el hero del sitio
+        d.text((80, 60), "Aa", font=font(MIJA, 120), fill=line)
+        s = sello(dark, 150).rotate(8, resample=Image.BICUBIC, expand=True); im.paste(s, (Wi - 230, 60), s)
+        sparkle(d, 330, 110, 26, acc)
+    else:        # dos arcos punteados + destellos
+        for r in (260, 340):
+            for k in range(0, 180, 6):
+                a1 = math.radians(k); a2 = math.radians(k + 3)
+                d.arc([Wi - 200 - r, -r, Wi - 200 + r, r], start=k, end=k + 3, fill=line, width=5)
+        sparkle(d, 120, 110, 36, acc); sparkle(d, 200, 175, 14, acc)
+    if not top_only:
+        wm = eye(mix(bg, C if dark else G, .12), 760); im.paste(wm, (Wi - 520, Hi - 560), wm)

@@ -1,6 +1,7 @@
 import sys, os, json
 sys.path.insert(0, "/home/claude/scripts")
 from design import *
+DECO = deco
 
 OUT = "/home/claude/colegiominacionsocialmedia/assets/2026-11/"
 def PH(name): return Image.open(M + name).convert("RGB")
@@ -40,9 +41,9 @@ def L_photo_full(photo, eyebrow_t, title, sub=None, focus=(.5, .5), acc=Y, n=0, 
     return im
 
 def L_type(bg, fg, acc, eyebrow_t, title, body=None, ic=None, n=0, i=0, swipe_=False, big=110, deco=True, foot=True):
+    _deco = deco
     im = Image.new("RGB", (W, H), bg); d = ImageDraw.Draw(im)
-    wm = eye(tuple(int(a * .86 + b * .14) for a, b in zip(bg, fg)), 760); im.paste(wm, (W - 520, H - 560), wm)
-    if deco: picado(d, W, 0, 8, [acc, P if acc != P else B, B if bg != B else LG, LG if bg != LG else Y], bg)
+    if _deco: DECO(im, bg, acc, i + len(title)); d = ImageDraw.Draw(im)
     f = fit_font(d, title, MIJA, W - 160, 4, big, 64); tl = wrap(d, title, f, W - 160)
     fb = font(SL, 40); bl = wrap(d, body, fb, W - 170) if body else []
     hb = (190 if ic else 0) + 56 + len(tl) * f.size * 1.08 + (26 + len(bl) * 40 * 1.36 if body else 0)
@@ -93,7 +94,7 @@ def L_phone(bg, fg, acc, shot, eyebrow_t, title, body=None, n=0, i=0, crop=None,
 
 def L_cta(bg=C, fg=G, acc=G, title="¿Quieres conocer el colegio?", body="Pide informes y agenda tu visita. Te atendemos de 9:00 a. m. a 3:30 p. m.", n=0, i=0, btn="Pide informes"):
     im = Image.new("RGB", (W, H), bg); d = ImageDraw.Draw(im)
-    picado(d, W, 0, 8, [G, Y, B, P], bg)
+    DECO(im, bg, acc, i + 1); d = ImageDraw.Draw(im)
     y = 300; f = fit_font(d, title, MIJA, W - 160, 3, 90, 56); y = text_block(d, (80, y), title, f, fg, W - 160, 1.08)
     y = text_block(d, (80, y + 24), body, font(SL, 38), INK if bg == C else fg, W - 160, 1.34) + 40
     d.rounded_rectangle([80, y, 680, y + 100], radius=50, fill=acc)
@@ -107,10 +108,11 @@ def L_cta(bg=C, fg=G, acc=G, title="¿Quieres conocer el colegio?", body="Pide i
 # Zona segura Reels/Historias 1080x1920: texto solo en x 80-960 y y 270-1500.
 # La cuadrícula del perfil recorta la portada a 3:4 (y 240-1680).
 RSAFE = (80, 270, 960, 1500)
-def L_reel_cover(photo, title, eyebrow_t, focus=(.5, .5), acc=Y, sub=None, bg=G):
+def L_reel_cover(photo, title, eyebrow_t, focus=(.5, .5), acc=Y, sub=None, bg=G, muertos=False):
     Wr, Hr, VH = 1080, 1920, 1080
     im = Image.new("RGB", (Wr, Hr), bg); im.paste(cover(photo, Wr, VH, focus), (0, 0)); d = ImageDraw.Draw(im)
-    picado(d, Wr, VH, 12, [Y, P, B, LG], bg, h=70)
+    if muertos: picado(d, Wr, VH, 12, [Y, P, B, LG], bg, h=70)
+    else: d.rectangle([0, VH, Wr, VH + 10], fill=acc); sparkle(d, Wr - 170, VH + 120, 34, acc); sparkle(d, Wr - 110, VH + 70, 14, acc)
     y = VH + 100; pill(d, (80, y), eyebrow_t, font(SB, 30), acc, G); y += 84
     f = fit_font(d, title, MIJA, RSAFE[2] - 80, 2, 84, 56)
     y = text_block(d, (80, y), title, f, C, RSAFE[2] - 80, 1.08)
@@ -121,7 +123,8 @@ def L_reel_cover(photo, title, eyebrow_t, focus=(.5, .5), acc=Y, sub=None, bg=G)
 def L_reel_card(bg, title, eyebrow_t, ic=None, sub=None):
     Wr, Hr = 1080, 1920
     im = Image.new("RGB", (Wr, Hr), bg); d = ImageDraw.Draw(im)
-    picado(d, Wr, 0, 7, [Y, P, B, LG], bg, h=150)
+    DECO(im, bg, Y, len(title), top_only=True); d = ImageDraw.Draw(im)
+    wm = eye(mix(bg, C, .1), 700); im.paste(wm, (Wr - 480, 1500), wm)
     lg = logo("verdeclaro", 240); im.paste(lg, (80, 300), lg)
     y = 560
     if ic: icn = icon(ic, 150, Y, bg); im.paste(icn, (80, y), icn); y += 185

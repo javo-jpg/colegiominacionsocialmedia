@@ -123,7 +123,7 @@ if want("11-aliados"):
 # 12 20 de noviembre
 if want("12-20-noviembre"):
     im = Image.new("RGB", (W, H), C); d = ImageDraw.Draw(im)
-    picado(d, W, 0, 8, [G, Y, P, B], C)
+    deco(im, C, P, 1); d = ImageDraw.Draw(im)
     d.text((80, 230), "20", font=font(MIJA, 360), fill=G)
     d.text((80, 600), "de noviembre", font=font(MIJA, 80), fill=G)
     y = text_block(d, (80, 730), "Celebramos la Revolución Mexicana y el Día de la Niñez.", font(SB, 46), INK, W - 160, 1.25)

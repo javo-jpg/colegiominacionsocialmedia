@@ -7,7 +7,8 @@ SAFE = (80, 270, 960, 1500)
 def end_card_safe():
     Wr, Hr = 1080, 1920
     im = Image.new("RGB", (Wr, Hr), G); d = ImageDraw.Draw(im)
-    picado(d, Wr, 0, 7, [Y, P, B, LG], G, h=150)
+    deco(im, G, Y, 0, top_only=True); d = ImageDraw.Draw(im)
+    wm = eye(mix(G, C, .1), 700); im.paste(wm, (Wr - 480, 1500), wm)
     lg = logo("verdeclaro", 300); im.paste(lg, (80, 300), lg)
     y = 300 + lg.height + 80
     f1 = font(MIJA, 96)
