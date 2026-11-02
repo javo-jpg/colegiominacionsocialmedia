@@ -32,30 +32,30 @@ def wrap(d,text,font,maxw):
         else: lines.append(cur); cur=w
     lines.append(cur); return lines
 # COVER 1080x1080
-for name,(W,H) in {"01-portada.jpg":(1080,1080),"story-portada.jpg":(1080,1920)}.items():
+for name,(W,H) in {"01-portada.jpg":(1080,1350),"story-portada.jpg":(1080,1920)}.items():
     BG=G
     im=Image.new("RGB",(W,H),G); d=ImageDraw.Draw(im)
-    top = 0 if H==1080 else 260
+    top = 0 if H==1350 else 260
     picado(d,W,top,7,[Y,P,B,LG])
     f1=ImageFont.truetype(MIJA,118); f2=ImageFont.truetype(SB,40); f3=ImageFont.truetype(SL,34)
-    y = 330 if H==1080 else 720
+    y = 420 if H==1350 else 720
     d.text((80,y-70),"DÍA DE MUERTOS 2026",font=f2,fill=Y)
     for ln in ["Así vivimos","nuestras","ofrendas"]:
         d.text((80,y),ln,font=f1,fill=C); y+=128
     d.text((80,y+30),"Preescolar Fresno · Primaria San Felipe",font=f3,fill=LG)
     lg=logo(BR+"logo-horizontal-verdeclaro.png",330)
-    im.paste(lg,(80,H-lg.height-(80 if H==1080 else 440)),lg)
-    if H==1080:
+    im.paste(lg,(80,H-lg.height-(90 if H==1350 else 440)),lg)
+    if H==1350:
         d.text((W-130,H-112),"Desliza",font=f2,fill=Y,anchor="ra")
         ay=H-92; d.line([(W-118,ay),(W-80,ay)],fill=Y,width=5); d.polygon([(W-80,ay-12),(W-64,ay),(W-80,ay+12)],fill=Y)
     im.save(OUT+name,quality=92)
 # CTA 1080x1080
 BG=C
-W=H=1080
+W,H=1080,1350
 im=Image.new("RGB",(W,H),C); d=ImageDraw.Draw(im)
 picado(d,W,0,7,[G,Y,B,P],seed=5)
 f1=ImageFont.truetype(MIJA,84); f2=ImageFont.truetype(SB,38); f3=ImageFont.truetype(SL,36)
-y=300
+y=360
 for ln in ["Tradición, valores","y comunidad,","todos los días."]:
     d.text((80,y),ln,font=f1,fill=G); y+=94
 y+=30
