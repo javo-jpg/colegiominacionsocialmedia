@@ -75,6 +75,29 @@ button:focus-visible,.tile:focus-visible{outline:3px solid var(--azul);outline-o
 .check{display:grid;gap:8px;padding:0;list-style:none;margin:0;counter-reset:c}
 .check li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 46px;position:relative;counter-increment:c}
 .check li::before{content:counter(c);position:absolute;left:12px;top:10px;width:24px;height:24px;border-radius:50%;background:var(--verde);color:#FCF8EF;font-size:.75rem;font-weight:700;display:grid;place-items:center}
+.rules{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:26px}
+.rules div{background:var(--chip);border-radius:10px;padding:12px 14px;display:grid;gap:4px;font-size:.88rem}
+.rules b{font-family:var(--display);color:var(--ink)}
+.rules a{color:var(--ink);font-weight:600}
+.rules div{align-content:start}
+.visit{margin-top:26px}
+.vh{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;border-bottom:2px solid var(--amarillo);padding-bottom:8px;margin-bottom:14px}
+.vh h3{font-size:1.25rem;color:var(--ink)}
+.vh span{color:var(--muted);font-size:.9rem}
+.sols{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.sol{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:8px;align-content:start;min-width:0}
+.sol header{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.sid{font-family:var(--display);font-weight:800;color:var(--coral);font-variant-numeric:tabular-nums}
+.fmt{font-size:.78rem;font-weight:600;background:var(--chip);padding:2px 9px;border-radius:10px}
+.sol h3{font-size:1.08rem;color:var(--fg)}
+.sol .para{font-size:.84rem;color:var(--ink);font-weight:600}
+.sol p{font-size:.92rem}
+.sol ol{margin:6px 0 0;padding-left:20px;display:grid;gap:3px;font-size:.9rem}
+.sol dl{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;margin:4px 0 0;font-size:.85rem}
+.sol dt{font-weight:600;color:var(--muted)}
+.sol dd{margin:0}
+@media (max-width:900px){.rules{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.rules{grid-template-columns:1fr}}
 footer{padding-block:28px 48px;color:var(--muted);font-size:.85rem}
 @media (max-width:900px){.layout,.lev,.three{grid-template-columns:1fr}.phone{position:static;max-width:440px;margin:0 auto}.slides img,.slides video{height:240px}.slides video{width:135px}}
 @media (prefers-reduced-motion:reduce){.tile img{transition:none}}
@@ -83,7 +106,7 @@ footer{padding-block:28px 48px;color:var(--muted);font-size:.85rem}
 <header class="hero"><div class="wrap inner">
   <div class="eyebrow">Colegio Mi Nación · Instagram y Facebook</div>
   <h1>Noviembre 2026, pieza por pieza</h1>
-  <p>19 publicaciones diseñadas con la marca: fotos de las ofrendas y del plantel de preescolar, capturas de la nueva web e ilustraciones. Las que dependen de grabar algo traen portada y guion; abajo está la lista de levantamientos.</p>
+  <p>19 publicaciones diseñadas con la marca: fotos de las ofrendas y del plantel de preescolar, capturas de la nueva web e ilustraciones. Las que dependen de grabar algo traen portada y guion; abajo están las <a href="#solicitudes" style="color:#EDCC6F">solicitudes de contenido para My Name Is Yellow</a>.</p>
   <div class="legend"><span class="st programado">Programado</span><span class="st material">Listo para programar</span><span class="st confirmar">Confirmar con Rocío</span><span class="st levantamiento">Falta grabar</span></div>
 </div></header>
 
@@ -216,7 +239,7 @@ Un espacio para jugar, explorar y aprender en tres idiomas.
 ¿Quieres conocerlo en persona? Agenda tu visita por WhatsApp: 56 5292 2720
 
 #Preescolar #Kinder #ColegioMiNación #Coyoacán #Preescolar #Primaria</pre><button type="button" data-copy="cap-08-preescolar-reel">Copiar copy</button></details>
-<p class="nota">Versión con fotos del plantel. Se reemplaza con &#x27;Un día en preescolar&#x27; cuando haya levantamiento. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound.</p>
+<p class="nota">Versión con fotos del plantel. Se reemplaza con &#x27;Un día en preescolar&#x27; cuando haya levantamiento. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound.</p>
 </article><article class="post" id="09-preguntas-casa">
 <header><div class="when"><b>dom 15 nov</b><span>18:00 · Carrusel · 5 láminas</span></div>
 <span class="pil" style="--c:#E8836B">Papás Presentes</span><span class="st programado">Programado</span></header>
@@ -361,16 +384,121 @@ Te contactamos pronto. 💚
   </div>
 </div></section>
 
-<section><div class="wrap">
-  <div class="sec-head"><div class="eyebrow">Para Armando y el equipo de levantamiento</div><h2>Lo que necesitamos grabar en noviembre</h2><p>Hoy solo tenemos material de las ofrendas. Para que el mes no dependa de eso, cada toma de abajo ya tiene una publicación asignada. Video vertical 4K, tomas de 3 a 5 s, audio limpio en testimonios (micrófono de solapa). Antes de grabar: lista de alumnos sin autorización y quién los identifica en sitio. Subir todo a la <a href="https://drive.google.com/drive/folders/14F_qWNtQxMj1LkDQ8pg-MiER1CurVblr">carpeta de Drive del colegio</a>, en una subcarpeta por fecha, a más tardar 24 h después de grabar.</p></div>
-  <div class="lev">
-    <div class="card"><span class="when2">YA · SIN GRABAR</span><h3>Clips crudos de las entrevistas de ofrendas</h3><ul><li><b>Prioridad 1.</b> Sin estos el recap queda sin las voces de los niños.</li><li>Los videos originales con audio (Drive, carpeta Primaria) para el recap v2 con las voces de los niños y subtítulos.</li><li>Los clips de entrevistas que Armando grabó antes a alumnos y maestras.</li><li>Cualquier material grabado anteriormente del colegio.</li></ul></div>
-    <div class="card"><span class="when2">10–12 NOV · PREESCOLAR FRESNO</span><h3>Un día en preescolar + maestras</h3><ul><li>Llegada, círculo de bienvenida, canción en inglés y francés, LUCA, recreo, salida (reel 14 nov, sustituye la versión con fotos).</li><li>2 maestras, 20–30 s: “¿Qué es lo que más te gusta de enseñar aquí?” (reel 17 nov).</li><li>Fachada y calle de Fresno 172.</li></ul></div>
-    <div class="card"><span class="when2">10–12 NOV · PRIMARIA SAN FELIPE</span><h3>Aliados, familias y Rocío</h3><ul><li>Una foto por aliado en uso: Innovamat, LUCA, Hachette, Tekman, Nat Geo, Música (carrusel 19 nov).</li><li>3 familias, 45–60 s: ¿por qué Mi Nación?, ¿desde cuándo?, ¿qué ha cambiado en su hijo? (reel fijado 25 nov).</li><li>2 maestras de primaria; clase de inglés y de francés.</li><li>Rocío, 45 s: qué es Papás Presentes y el libro del mes.</li><li>Fachada de San Felipe (carrusel 26 nov).</li></ul></div>
-    <div class="card"><span class="when2">19–20 NOV · SI HAY ACTIVIDAD</span><h3>20 de noviembre</h3><ul><li>Desfile, actividad deportiva o festival: 10–15 fotos y 5 clips. Sustituye el post ilustrado.</li></ul></div>
-    <div class="card"><span class="when2">DICIEMBRE · FECHA POR CONFIRMAR</span><h3>Festival o posada navideña</h3><ul><li>Cobertura completa con 2 personas: reel, carrusel e historias en vivo.</li><li>Entrevistas cortas a familias para la campaña de inscripciones.</li></ul></div>
-    <div class="card"><span class="when2">CADA SEMANA</span><h3>Fotos del día a día</h3><p>Las maestras pueden mandar 5 a 8 fotos o clips por semana de lo que pase en clase. Con eso mantenemos historias diarias sin esperar un rodaje.</p></div>
+<section id="solicitudes"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">Solicitudes para My Name Is Yellow · Armando Hernández y equipo</div><h2>Contenido que necesitamos de la escuela y los niños</h2>
+  <p>Hoy solo tenemos material de las ofrendas. Cada solicitud dice para qué publicación es, la idea, la lista exacta de tomas y cómo entregarla. Las marcadas como prioridad sostienen piezas ya programadas.</p></div>
+  <div class="rules">
+    <div><b>Formato</b><span>Video vertical 4K a 30 fps, tomas de 3 a 5 s con 2 s de colchón. Fotos en 4:5 y horizontales.</span></div>
+    <div><b>Audio</b><span>Micrófono de solapa en testimonios. Sin música ni voz en off: la edición la hacemos nosotros.</span></div>
+    <div><b>Niños</b><span>Antes de grabar, lista de alumnos sin autorización y quién los identifica en sitio. Si hay duda: manos, pies o espaldas.</span></div>
+    <div><b>Entrega</b><span>Material crudo en la <a href="https://drive.google.com/drive/folders/14F_qWNtQxMj1LkDQ8pg-MiER1CurVblr">carpeta de Drive del colegio</a>, una subcarpeta por fecha y código de solicitud (por ejemplo, 2026-11-10_S-02), máximo 24 h después de grabar.</span></div>
   </div>
+  <div class="visit"><div class="vh"><h3>Sin grabar nada nuevo</h3><span>Material que ya existe</span></div><div class="sols"><article class="sol">
+<header><span class="sid">S-01</span><span class="fmt">Clips crudos</span><span class="st confirmar">Prioridad</span></header>
+<h3>Entrevistas de ofrendas con audio original</h3>
+<p class="para">Para: Recap de ofrendas (voces de los niños)</p>
+<p>Los videos originales, sin música, de los alumnos explicando su ofrenda con micrófono. Con ellos agregamos sus voces con subtítulos al recap.</p>
+<details open><summary>Tomas</summary><ol><li>Todos los clips de entrevistas tal como salieron de la cámara o el celular</li><li>También las entrevistas a alumnos y maestras de la primera visita</li></ol></details>
+<dl><dt>Audio</dt><dd>Audio original, sin música ni voz en off</dd><dt>Personas</dt><dd>Solo alumnos con autorización</dd><dt>Entrega</dt><dd>Hoy o mañana, en la carpeta de Drive /Ofrendas/crudos</dd></dl>
+</article></div></div><div class="visit"><div class="vh"><h3>Visita 1 · Preescolar Fresno</h3><span>Lunes 10 o martes 11 de noviembre, 8:30 a 11:30 a. m.</span></div><div class="sols"><article class="sol">
+<header><span class="sid">S-02</span><span class="fmt">Reel 20–25 s</span><span class="st confirmar">Prioridad</span></header>
+<h3>Un día en preescolar, desde la mochila</h3>
+<p class="para">Para: Reel 14 nov (reemplaza la versión con fotos)</p>
+<p>Seguimos una mochila de la entrada a la salida. Sin rostros: manos, pies y espaldas, así funciona aunque haya niños sin autorización.</p>
+<details open><summary>Tomas</summary><ol><li>Pies cruzando la puerta de Fresno 172</li><li>Mochila colgándose en el perchero</li><li>Manos saludando a la maestra</li><li>Círculo de bienvenida desde atrás</li><li>Manos con plastilina o material de LUCA</li><li>Resbaladilla en cámara lenta (espaldas)</li><li>Lunch abierto sobre la mesa</li><li>Abrazo de despedida con papá o mamá (espaldas)</li></ol></details>
+<dl><dt>Audio</dt><dd>Sonido ambiente; la música la ponemos en edición</dd><dt>Personas</dt><dd>Sin rostros</dd><dt>Entrega</dt><dd>Vertical 4K, 8 tomas de 3–4 s, más 2 de respaldo cada una</dd></dl>
+</article><article class="sol">
+<header><span class="sid">S-03</span><span class="fmt">Reel 15–20 s</span></header>
+<h3>¿Cómo se dice…? en tres idiomas</h3>
+<p class="para">Para: Diciembre, serie de idiomas</p>
+<p>Cada niño dice una palabra en español, inglés y francés frente a un fondo de color de la marca. Formato corto y fácil de compartir.</p>
+<details open><summary>Tomas</summary><ol><li>6 niños, uno por toma, plano medio frente a pared lisa</li><li>Palabras: manzana, apple, pomme / gato, cat, chat / gracias, thank you, merci</li><li>Una toma de la maestra de francés diciendo «Bonjour !»</li></ol></details>
+<dl><dt>Audio</dt><dd>Micrófono de solapa o boom cerca; audio limpio es clave</dd><dt>Personas</dt><dd>Solo niños con autorización y avisados el día anterior</dd><dt>Entrega</dt><dd>Vertical, plano fijo con tripié</dd></dl>
+</article><article class="sol">
+<header><span class="sid">S-04</span><span class="fmt">Testimonio</span><span class="st confirmar">Prioridad</span></header>
+<h3>Maestras de preescolar</h3>
+<p class="para">Para: Reel 17 nov</p>
+<p>Dos maestras responden a cámara. Avisarles con días de anticipación para que vengan con la prenda del colegio.</p>
+<details open><summary>Tomas</summary><ol><li>¿Qué es lo que más te gusta de enseñar aquí?</li><li>¿Qué aprendió un niño contigo este año que te hizo sentir orgullosa?</li><li>En una frase: ¿cómo es Mi Nación?</li><li>B-roll: la maestra trabajando con el grupo (manos, espaldas)</li></ol></details>
+<dl><dt>Audio</dt><dd>Micrófono de solapa</dd><dt>Personas</dt><dd>2 maestras de preescolar</dd><dt>Entrega</dt><dd>Respuestas de 20–30 s cada una, más 4 tomas de apoyo</dd></dl>
+</article><article class="sol">
+<header><span class="sid">S-05</span><span class="fmt">Fotos</span></header>
+<h3>Así aprendemos jugando</h3>
+<p class="para">Para: Carrusel de diciembre</p>
+<p>Detalles del salón y del trabajo de los niños. Sirven para muchos carruseles.</p>
+<details open><summary>Tomas</summary><ol><li>10 fotos de detalle: manos con material, cuadernos, trabajos en la pared, juegos del patio</li><li>2 fotos generales del salón sin niños</li><li>Fachada y calle de Fresno 172 de día</li></ol></details>
+<dl><dt>Audio</dt><dd>—</dd><dt>Personas</dt><dd>Sin rostros</dd><dt>Entrega</dt><dd>Fotos verticales 4:5 y horizontales</dd></dl>
+</article></div></div><div class="visit"><div class="vh"><h3>Visita 2 · Primaria San Felipe</h3><span>Miércoles 12 de noviembre, 8:30 a 12:00</span></div><div class="sols"><article class="sol">
+<header><span class="sid">S-06</span><span class="fmt">Fotos + clips</span><span class="st confirmar">Prioridad</span></header>
+<h3>Nuestros aliados en el salón</h3>
+<p class="para">Para: Carrusel 19 nov (ya programado; se actualiza con fotos reales)</p>
+<p>Una imagen real de cada aliado en uso para reemplazar las ilustraciones del carrusel.</p>
+<details open><summary>Tomas</summary><ol><li>Innovamat: manos con material de matemáticas</li><li>LUCA: pantalla con la actividad y manos</li><li>Hachette: alumno leyendo (sobre el hombro)</li><li>Tekman: trabajo en equipo en la mesa</li><li>Nat Geo: actividad de ciencia o naturaleza</li><li>Música: instrumentos en clase</li><li>Un clip de 3 s de cada uno</li></ol></details>
+<dl><dt>Audio</dt><dd>Ambiente</dd><dt>Personas</dt><dd>Preferir manos y espaldas</dd><dt>Entrega</dt><dd>6 fotos 4:5 y 6 clips verticales; antes del 17 nov</dd></dl>
+</article><article class="sol">
+<header><span class="sid">S-07</span><span class="fmt">Testimonio</span><span class="st confirmar">Prioridad</span></header>
+<h3>Familias: por qué elegimos Mi Nación</h3>
+<p class="para">Para: Reel 25 nov (fijado)</p>
+<p>Tres papás o mamás a la salida. Rocío ayuda a elegir familias que quieran participar.</p>
+<details open><summary>Tomas</summary><ol><li>¿Por qué eligieron Mi Nación?</li><li>¿Desde cuándo están en el colegio?</li><li>¿Qué ha cambiado en su hijo?</li><li>Toma de la familia caminando hacia la entrada (puede ser de espaldas)</li></ol></details>
+<dl><dt>Audio</dt><dd>Micrófono de solapa</dd><dt>Personas</dt><dd>3 familias con carta de autorización firmada</dd><dt>Entrega</dt><dd>45–60 s por familia</dd></dl>
+</article><article class="sol">
+<header><span class="sid">S-08</span><span class="fmt">Reel 20 s</span></header>
+<h3>¿Qué quieres ser de grande?</h3>
+<p class="para">Para: Diciembre</p>
+<p>Pregunta rápida a varios alumnos de primaria, estilo entrevista en la calle. Cierra con «En Mi Nación empiezan hoy».</p>
+<details open><summary>Tomas</summary><ol><li>8–10 alumnos, una respuesta corta cada uno</li><li>Pregunta extra: ¿qué es lo que más te gusta del colegio?</li></ol></details>
+<dl><dt>Audio</dt><dd>Micrófono de mano visible o solapa</dd><dt>Personas</dt><dd>Solo alumnos con autorización</dd><dt>Entrega</dt><dd>Vertical, respuestas de 3–5 s</dd></dl>
+</article><article class="sol">
+<header><span class="sid">S-09</span><span class="fmt">Clips</span></header>
+<h3>Clase de inglés y de francés</h3>
+<p class="para">Para: Carrusel de idiomas y reels de diciembre</p>
+<p>Momentos reales de clase en otro idioma: una canción, una pregunta y respuesta, un juego.</p>
+<details open><summary>Tomas</summary><ol><li>15 s de canción o saludo en francés</li><li>15 s de conversación en inglés</li><li>Pizarrón con palabras en los tres idiomas</li></ol></details>
+<dl><dt>Audio</dt><dd>Ambiente, sin música de fondo</dd><dt>Personas</dt><dd>Grupo de espaldas o alumnos autorizados</dd><dt>Entrega</dt><dd>Vertical</dd></dl>
+</article><article class="sol">
+<header><span class="sid">S-10</span><span class="fmt">Video 45 s + 3 cápsulas</span><span class="st confirmar">Prioridad</span></header>
+<h3>Rocío presenta Papás Presentes</h3>
+<p class="para">Para: Posts de Papás Presentes en noviembre y diciembre</p>
+<p>Rocío a cámara: qué es Papás Presentes, la lectura del mes y cómo enviar preguntas. Tres cápsulas de 20 s respondiendo preguntas de crianza.</p>
+<details open><summary>Tomas</summary><ol><li>Presentación de 45 s</li><li>3 respuestas de 20 s</li><li>B-roll: Rocío con el libro en la mano</li></ol></details>
+<dl><dt>Audio</dt><dd>Micrófono de solapa, lugar silencioso</dd><dt>Personas</dt><dd>Rocío</dd><dt>Entrega</dt><dd>Vertical, luz de frente</dd></dl>
+</article><article class="sol">
+<header><span class="sid">S-11</span><span class="fmt">Fotos</span><span class="st confirmar">Prioridad</span></header>
+<h3>Fachada y entrada de San Felipe</h3>
+<p class="para">Para: Carrusel 26 nov (ya programado; se actualiza)</p>
+<p>La foto de primaria del carrusel de planteles es del altar; se cambia por la fachada.</p>
+<details open><summary>Tomas</summary><ol><li>Fachada de frente, de día</li><li>Entrada con el logo</li><li>Calle para ubicar el plantel</li></ol></details>
+<dl><dt>Audio</dt><dd>—</dd><dt>Personas</dt><dd>Sin personas</dd><dt>Entrega</dt><dd>Antes del 24 nov</dd></dl>
+</article><article class="sol">
+<header><span class="sid">S-12</span><span class="fmt">Time-lapse</span></header>
+<h3>Ajedrez</h3>
+<p class="para">Para: Diciembre</p>
+<p>Una partida en time-lapse desde arriba: solo tablero y manos.</p>
+<details open><summary>Tomas</summary><ol><li>Cenital del tablero durante 5 minutos</li><li>Detalle de una pieza moviéndose</li></ol></details>
+<dl><dt>Audio</dt><dd>—</dd><dt>Personas</dt><dd>Solo manos</dd><dt>Entrega</dt><dd>Celular en tripié cenital</dd></dl>
+</article></div></div><div class="visit"><div class="vh"><h3>Visita 3 · 20 de noviembre</h3><span>Jueves 19 o viernes 20, solo si hay actividad escolar</span></div><div class="sols"><article class="sol">
+<header><span class="sid">S-13</span><span class="fmt">Cobertura</span></header>
+<h3>Actividad del 20 de noviembre</h3>
+<p class="para">Para: Post 20 nov (ya programado; se cambia por fotos reales)</p>
+<p>Solo si el colegio hace desfile, festival o actividad deportiva.</p>
+<details open><summary>Tomas</summary><ol><li>10–15 fotos</li><li>5 clips de 3–5 s para un reel de 15 s</li></ol></details>
+<dl><dt>Audio</dt><dd>Ambiente</dd><dt>Personas</dt><dd>Cuidar alumnos sin autorización</dd><dt>Entrega</dt><dd>Mismo día, antes de las 3 p. m.</dd></dl>
+</article></div></div><div class="visit"><div class="vh"><h3>Visita 4 · Festival navideño</h3><span>Diciembre, fecha por confirmar con Rocío</span></div><div class="sols"><article class="sol">
+<header><span class="sid">S-14</span><span class="fmt">Cobertura completa</span><span class="st confirmar">Prioridad</span></header>
+<h3>Festival o posada navideña</h3>
+<p class="para">Para: Recap de diciembre y campaña de inscripciones</p>
+<p>La pieza más fuerte de diciembre. Dos personas: una en escenario y otra en familias.</p>
+<details open><summary>Tomas</summary><ol><li>Presentaciones completas desde el frente</li><li>Reacciones de familias (con autorización)</li><li>3 entrevistas cortas a familias: ¿por qué recomendarías Mi Nación?</li><li>Detalles de decoración</li></ol></details>
+<dl><dt>Audio</dt><dd>Audio del escenario y micrófono de solapa para entrevistas</dd><dt>Personas</dt><dd>Lista de autorizaciones antes del evento</dd><dt>Entrega</dt><dd>Selección en 48 h</dd></dl>
+</article></div></div><div class="visit"><div class="vh"><h3>Cada semana · maestras desde el celular</h3><span>Lunes a viernes, sin equipo de grabación</span></div><div class="sols"><article class="sol">
+<header><span class="sid">S-15</span><span class="fmt">Fotos y clips del celular</span></header>
+<h3>Momento de la semana</h3>
+<p class="para">Para: Historias diarias</p>
+<p>Cada maestra manda de 5 a 8 fotos o clips cortos por semana de lo que pasa en su salón. Así hay historias sin esperar una visita.</p>
+<details open><summary>Tomas</summary><ol><li>Una actividad</li><li>Un trabajo terminado</li><li>Un momento divertido</li></ol></details>
+<dl><dt>Audio</dt><dd>—</dd><dt>Personas</dt><dd>Solo alumnos con autorización</dd><dt>Entrega</dt><dd>Viernes, a la carpeta de Drive /Semana</dd></dl>
+</article></div></div>
 </div></section>
 
 <section><div class="wrap">

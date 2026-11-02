@@ -54,7 +54,8 @@ for f in sorted(glob.glob("/home/claude/colegiominacionsocialmedia/assets/highli
     n = os.path.basename(f)[3:-4]; im = Image.open(f).convert("RGB").crop((0, 420, 1080, 1500)).resize((120, 120)); b = io.BytesIO(); im.save(b, "JPEG", quality=80)
     hl.append(f'<figure><img src="data:image/jpeg;base64,{base64.b64encode(b.getvalue()).decode()}" alt=""><figcaption>{ {"papas":"Papás","vida-mn":"Vida MN"}.get(n, n.capitalize()) }</figcaption></figure>')
 tpl = open("/home/claude/scripts/preview2.tpl.html").read()
-out = tpl.replace("__GRID__", "".join(grid)).replace("__CARDS__", "".join(cards)).replace("__HL__", "".join(hl)).replace("__N__", str(len(allp)))
+from solicitudes import render as sol_render
+out = tpl.replace("__SOL__", sol_render()).replace("__GRID__", "".join(grid)).replace("__CARDS__", "".join(cards)).replace("__HL__", "".join(hl)).replace("__N__", str(len(allp)))
 os.makedirs("/home/claude/prev", exist_ok=True)
 open("/home/claude/prev/preview-noviembre.html", "w").write(out)
 json.dump([{k: v for k, v in p.items() if k != "files"} for p in allp], open("/home/claude/colegiominacionsocialmedia/plan/2026-11/posts.json", "w"), ensure_ascii=False, indent=1)

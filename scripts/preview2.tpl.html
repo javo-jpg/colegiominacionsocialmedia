@@ -75,6 +75,29 @@ button:focus-visible,.tile:focus-visible{outline:3px solid var(--azul);outline-o
 .check{display:grid;gap:8px;padding:0;list-style:none;margin:0;counter-reset:c}
 .check li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 46px;position:relative;counter-increment:c}
 .check li::before{content:counter(c);position:absolute;left:12px;top:10px;width:24px;height:24px;border-radius:50%;background:var(--verde);color:#FCF8EF;font-size:.75rem;font-weight:700;display:grid;place-items:center}
+.rules{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:26px}
+.rules div{background:var(--chip);border-radius:10px;padding:12px 14px;display:grid;gap:4px;font-size:.88rem}
+.rules b{font-family:var(--display);color:var(--ink)}
+.rules a{color:var(--ink);font-weight:600}
+.rules div{align-content:start}
+.visit{margin-top:26px}
+.vh{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;border-bottom:2px solid var(--amarillo);padding-bottom:8px;margin-bottom:14px}
+.vh h3{font-size:1.25rem;color:var(--ink)}
+.vh span{color:var(--muted);font-size:.9rem}
+.sols{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.sol{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:8px;align-content:start;min-width:0}
+.sol header{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.sid{font-family:var(--display);font-weight:800;color:var(--coral);font-variant-numeric:tabular-nums}
+.fmt{font-size:.78rem;font-weight:600;background:var(--chip);padding:2px 9px;border-radius:10px}
+.sol h3{font-size:1.08rem;color:var(--fg)}
+.sol .para{font-size:.84rem;color:var(--ink);font-weight:600}
+.sol p{font-size:.92rem}
+.sol ol{margin:6px 0 0;padding-left:20px;display:grid;gap:3px;font-size:.9rem}
+.sol dl{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;margin:4px 0 0;font-size:.85rem}
+.sol dt{font-weight:600;color:var(--muted)}
+.sol dd{margin:0}
+@media (max-width:900px){.rules{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.rules{grid-template-columns:1fr}}
 footer{padding-block:28px 48px;color:var(--muted);font-size:.85rem}
 @media (max-width:900px){.layout,.lev,.three{grid-template-columns:1fr}.phone{position:static;max-width:440px;margin:0 auto}.slides img,.slides video{height:240px}.slides video{width:135px}}
 @media (prefers-reduced-motion:reduce){.tile img{transition:none}}
@@ -83,7 +106,7 @@ footer{padding-block:28px 48px;color:var(--muted);font-size:.85rem}
 <header class="hero"><div class="wrap inner">
   <div class="eyebrow">Colegio Mi Nación · Instagram y Facebook</div>
   <h1>Noviembre 2026, pieza por pieza</h1>
-  <p>__N__ publicaciones diseñadas con la marca: fotos de las ofrendas y del plantel de preescolar, capturas de la nueva web e ilustraciones. Las que dependen de grabar algo traen portada y guion; abajo está la lista de levantamientos.</p>
+  <p>__N__ publicaciones diseñadas con la marca: fotos de las ofrendas y del plantel de preescolar, capturas de la nueva web e ilustraciones. Las que dependen de grabar algo traen portada y guion; abajo están las <a href="#solicitudes" style="color:#EDCC6F">solicitudes de contenido para My Name Is Yellow</a>.</p>
   <div class="legend"><span class="st programado">Programado</span><span class="st material">Listo para programar</span><span class="st confirmar">Confirmar con Rocío</span><span class="st levantamiento">Falta grabar</span></div>
 </div></header>
 
@@ -105,16 +128,16 @@ footer{padding-block:28px 48px;color:var(--muted);font-size:.85rem}
   </div>
 </div></section>
 
-<section><div class="wrap">
-  <div class="sec-head"><div class="eyebrow">Para Armando y el equipo de levantamiento</div><h2>Lo que necesitamos grabar en noviembre</h2><p>Hoy solo tenemos material de las ofrendas. Para que el mes no dependa de eso, cada toma de abajo ya tiene una publicación asignada. Video vertical 4K, tomas de 3 a 5 s, audio limpio en testimonios (micrófono de solapa). Antes de grabar: lista de alumnos sin autorización y quién los identifica en sitio. Subir todo a la <a href="https://drive.google.com/drive/folders/14F_qWNtQxMj1LkDQ8pg-MiER1CurVblr">carpeta de Drive del colegio</a>, en una subcarpeta por fecha, a más tardar 24 h después de grabar.</p></div>
-  <div class="lev">
-    <div class="card"><span class="when2">YA · SIN GRABAR</span><h3>Clips crudos de las entrevistas de ofrendas</h3><ul><li><b>Prioridad 1.</b> Sin estos el recap queda sin las voces de los niños.</li><li>Los videos originales con audio (Drive, carpeta Primaria) para el recap v2 con las voces de los niños y subtítulos.</li><li>Los clips de entrevistas que Armando grabó antes a alumnos y maestras.</li><li>Cualquier material grabado anteriormente del colegio.</li></ul></div>
-    <div class="card"><span class="when2">10–12 NOV · PREESCOLAR FRESNO</span><h3>Un día en preescolar + maestras</h3><ul><li>Llegada, círculo de bienvenida, canción en inglés y francés, LUCA, recreo, salida (reel 14 nov, sustituye la versión con fotos).</li><li>2 maestras, 20–30 s: “¿Qué es lo que más te gusta de enseñar aquí?” (reel 17 nov).</li><li>Fachada y calle de Fresno 172.</li></ul></div>
-    <div class="card"><span class="when2">10–12 NOV · PRIMARIA SAN FELIPE</span><h3>Aliados, familias y Rocío</h3><ul><li>Una foto por aliado en uso: Innovamat, LUCA, Hachette, Tekman, Nat Geo, Música (carrusel 19 nov).</li><li>3 familias, 45–60 s: ¿por qué Mi Nación?, ¿desde cuándo?, ¿qué ha cambiado en su hijo? (reel fijado 25 nov).</li><li>2 maestras de primaria; clase de inglés y de francés.</li><li>Rocío, 45 s: qué es Papás Presentes y el libro del mes.</li><li>Fachada de San Felipe (carrusel 26 nov).</li></ul></div>
-    <div class="card"><span class="when2">19–20 NOV · SI HAY ACTIVIDAD</span><h3>20 de noviembre</h3><ul><li>Desfile, actividad deportiva o festival: 10–15 fotos y 5 clips. Sustituye el post ilustrado.</li></ul></div>
-    <div class="card"><span class="when2">DICIEMBRE · FECHA POR CONFIRMAR</span><h3>Festival o posada navideña</h3><ul><li>Cobertura completa con 2 personas: reel, carrusel e historias en vivo.</li><li>Entrevistas cortas a familias para la campaña de inscripciones.</li></ul></div>
-    <div class="card"><span class="when2">CADA SEMANA</span><h3>Fotos del día a día</h3><p>Las maestras pueden mandar 5 a 8 fotos o clips por semana de lo que pase en clase. Con eso mantenemos historias diarias sin esperar un rodaje.</p></div>
+<section id="solicitudes"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">Solicitudes para My Name Is Yellow · Armando Hernández y equipo</div><h2>Contenido que necesitamos de la escuela y los niños</h2>
+  <p>Hoy solo tenemos material de las ofrendas. Cada solicitud dice para qué publicación es, la idea, la lista exacta de tomas y cómo entregarla. Las marcadas como prioridad sostienen piezas ya programadas.</p></div>
+  <div class="rules">
+    <div><b>Formato</b><span>Video vertical 4K a 30 fps, tomas de 3 a 5 s con 2 s de colchón. Fotos en 4:5 y horizontales.</span></div>
+    <div><b>Audio</b><span>Micrófono de solapa en testimonios. Sin música ni voz en off: la edición la hacemos nosotros.</span></div>
+    <div><b>Niños</b><span>Antes de grabar, lista de alumnos sin autorización y quién los identifica en sitio. Si hay duda: manos, pies o espaldas.</span></div>
+    <div><b>Entrega</b><span>Material crudo en la <a href="https://drive.google.com/drive/folders/14F_qWNtQxMj1LkDQ8pg-MiER1CurVblr">carpeta de Drive del colegio</a>, una subcarpeta por fecha y código de solicitud (por ejemplo, 2026-11-10_S-02), máximo 24 h después de grabar.</span></div>
   </div>
+  __SOL__
 </div></section>
 
 <section><div class="wrap">
