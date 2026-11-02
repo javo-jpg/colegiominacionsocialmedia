@@ -1,0 +1,211 @@
+[
+ {
+  "slug": "01-ofrendas",
+  "fecha": "2026-11-02",
+  "hora": "18:00",
+  "tipo": "Carrusel",
+  "pilar": "Vida MN",
+  "estado": "programado",
+  "caption": "Este Día de Muertos, preescolar y primaria llenaron el colegio de color, memoria y tradición. 🌼\n\nLas familias nos acompañaron a recorrer las ofrendas y los trabajos que prepararon los alumnos para recordar a quienes queremos.\n\nGracias, comunidad Mi Nación, por mantener viva esta tradición con nosotros. 🧡\n\n¿Quieres conocer el colegio? Pide informes por WhatsApp: 56 5292 2720\n\n#ColegioMiNación #DíaDeMuertos #Coyoacán",
+  "nota": "Programado en Metricool con 8 imágenes. Rocío confirma permisos antes de las 6:00 p. m."
+ },
+ {
+  "slug": "02-reel-recap",
+  "fecha": "2026-11-03",
+  "hora": "13:00",
+  "tipo": "Reel",
+  "pilar": "Vida MN",
+  "estado": "listo",
+  "video": "v/recap.mp4",
+  "caption": "Así se vivió el Día de Muertos en Mi Nación 💀🌼\n\nOfrendas hechas por nuestros alumnos, una presentación inspirada en Michael Jackson y toda la comunidad reunida.\n\nGracias a las familias, alumnos y maestros que lo hicieron posible. 💚\n\n#ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": "v1 sin voces de los niños (el video de la agencia trae música encima). Falta música: agregar desde la biblioteca de Instagram. v2 con audio original si nos pasan los clips crudos."
+ },
+ {
+  "slug": "03-nueva-web",
+  "fecha": "2026-11-05",
+  "hora": "17:00",
+  "tipo": "Carrusel",
+  "pilar": "Admisiones",
+  "estado": "listo",
+  "n": 6,
+  "caption": "¡Tenemos página nueva! 🎉\n\nAhora puedes conocer Colegio Mi Nación desde tu celular: cómo aprenden nuestros alumnos, los tres idiomas, nuestros aliados y Papás Presentes.\n\n👉 Los niños pueden elegir un personaje que los acompaña a explorar.\n👉 Pedir informes está a un toque: WhatsApp, llamada o formulario.\n\nEntra a colegiominacion.com y cuéntanos en los comentarios qué te gustó más. 💚\n\n#ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": ""
+ },
+ {
+  "slug": "04-papas-presentes",
+  "fecha": "2026-11-07",
+  "hora": "11:00",
+  "tipo": "Carrusel",
+  "pilar": "Papás Presentes",
+  "estado": "confirmar",
+  "n": 4,
+  "caption": "Ser papá o mamá también se aprende, y nadie tiene que hacerlo solo. 💛\n\nPresentamos Papás Presentes, un espacio gratuito de Colegio Mi Nación para todas las familias, sean o no parte del colegio:\n📚 Un libro cada mes\n💬 Preguntas para Rocío\n🏡 Ideas y actividades para casa\n🤝 Encuentros para conversar\n\nEste mes leemos Hijos felices, de Sixto Porras.\n\nEntra a colegiominacion.com/papas-presentes 👈\n\n#PapásPresentes #ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": "Confirmar con Rocío que Hijos felices es la lectura de noviembre."
+ },
+ {
+  "slug": "05-tres-idiomas",
+  "fecha": "2026-11-10",
+  "hora": "13:00",
+  "tipo": "Carrusel",
+  "pilar": "Propuesta",
+  "estado": "listo",
+  "n": 6,
+  "caption": "Hola · Hello · Bonjour 👋\n\nEn Colegio Mi Nación tus hijos aprenden en tres idiomas: español, inglés y francés.\n\nAdemás, el colegio cubre el costo de la certificación Cambridge English. Pregunta a admisiones en qué grado se presenta.\n\n¿Quieres saber más? Pide informes por WhatsApp: 56 5292 2720\n\n#TresIdiomas #Bilingüe #ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": ""
+ },
+ {
+  "slug": "06-pedir-informes",
+  "fecha": "2026-11-12",
+  "hora": "17:00",
+  "tipo": "Carrusel",
+  "pilar": "Admisiones",
+  "estado": "listo",
+  "n": 5,
+  "caption": "¿Buscas preescolar o primaria en Coyoacán? Así puedes pedir informes 👇\n\n💬 WhatsApp: 56 5292 2720\n📞 Llamada: 55 5911 1865 (9:00 a. m. a 3:30 p. m.)\n📝 Formulario: colegiominacion.com\n\n✨ Pregunta por la semana de experiencia sin costo.\n\n📍 Preescolar: Fresno 172, Santa Úrsula Coapa\n📍 Primaria: San Felipe MZ532 LT4 (271), Pedregal de Santa Úrsula\n\nGuarda este post para tenerlo a la mano 📌\n\n#Inscripciones #ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": "Fijar en posición 1."
+ },
+ {
+  "slug": "07-buen-fin",
+  "fecha": "2026-11-13",
+  "hora": "13:00",
+  "tipo": "Post",
+  "pilar": "Admisiones",
+  "estado": "confirmar",
+  "n": 1,
+  "caption": "Este Buen Fin, mientras todos buscan ofertas, te invitamos a algo que vale más: conocer dónde puede crecer tu hijo. 💚\n\nVive una semana de experiencia sin costo en Colegio Mi Nación (sujeto a disponibilidad).\n\nPide informes por WhatsApp: 56 5292 2720\n\n#BuenFin #ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": "Confirmar con Rocío si habrá alguna promoción real; si no, se publica así."
+ },
+ {
+  "slug": "08-preescolar-reel",
+  "fecha": "2026-11-14",
+  "hora": "11:00",
+  "tipo": "Reel",
+  "pilar": "Propuesta",
+  "estado": "listo",
+  "n": 1,
+  "caption": "Así es nuestro preescolar en Fresno 172, Santa Úrsula Coapa 🌳\n\nUn espacio para jugar, explorar y aprender en tres idiomas.\n\n¿Quieres conocerlo en persona? Agenda tu visita por WhatsApp: 56 5292 2720\n\n#Preescolar #Kinder #ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": "Versión con fotos del plantel. Se reemplaza con 'Un día en preescolar' cuando haya levantamiento.",
+  "video": "v/preescolar.mp4"
+ },
+ {
+  "slug": "09-preguntas-casa",
+  "fecha": "2026-11-15",
+  "hora": "18:00",
+  "tipo": "Carrusel",
+  "pilar": "Papás Presentes",
+  "estado": "listo",
+  "n": 5,
+  "caption": "Las conversaciones más importantes a veces empiezan con una pregunta sencilla. 💬\n\nTe dejamos 3 preguntas para platicar con tus hijos esta semana. Guárdalas y cuéntanos cuál funcionó mejor.\n\nPapás Presentes es gratuito y abierto a todas las familias 💛\ncolegiominacion.com/papas-presentes\n\n#PapásPresentes #ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": ""
+ },
+ {
+  "slug": "10-maestras-reel",
+  "fecha": "2026-11-17",
+  "hora": "13:00",
+  "tipo": "Reel",
+  "pilar": "Familias",
+  "estado": "levantamiento",
+  "n": 1,
+  "caption": "Les preguntamos a nuestras maestras qué es lo que más les gusta de enseñar en Mi Nación. 💚\n\n[Ajustar con sus respuestas]\n\n#ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": "Portada lista. Falta grabar: 2 maestras de preescolar y 2 de primaria, 20–30 s cada una."
+ },
+ {
+  "slug": "11-aliados",
+  "fecha": "2026-11-19",
+  "hora": "17:00",
+  "tipo": "Carrusel",
+  "pilar": "Propuesta",
+  "estado": "listo",
+  "n": 8,
+  "caption": "¿Con qué aprenden nuestros alumnos? 🧩\n\nTrabajamos con aliados que apoyan a los maestros en el salón:\n🔢 Innovamat · pensamiento matemático\n🔤 LUCA · lectoescritura en español e inglés\n📚 Hachette · lectura y cultura general\n💡 Tekman · metodologías activas\n🌿 Nat Geo Education · ciencia y naturaleza\n🎵 Música · expresión y creatividad\n\nConoce cada uno y prueba sus actividades en colegiominacion.com\n\n#ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": "Cuando haya levantamiento, sumar una foto real por aliado."
+ },
+ {
+  "slug": "12-20-noviembre",
+  "fecha": "2026-11-20",
+  "hora": "13:00",
+  "tipo": "Post",
+  "pilar": "Vida MN",
+  "estado": "listo",
+  "n": 1,
+  "caption": "Hoy recordamos la Revolución Mexicana 🇲🇽 y celebramos el Día de la Niñez.\n\nCada niña y cada niño tiene derecho a jugar, aprender y ser escuchado. Eso es lo que cuidamos en Mi Nación todos los días. 💚\n\n#ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": "Si hay actividad escolar el 19 o 20, se cambia por cobertura."
+ },
+ {
+  "slug": "13-pregunta-rocio",
+  "fecha": "2026-11-21",
+  "hora": "11:00",
+  "tipo": "Post",
+  "pilar": "Papás Presentes",
+  "estado": "listo",
+  "n": 1,
+  "caption": "¿Tienes una pregunta sobre la crianza de tus hijos? 💬\n\nEnvíala a Rocío desde nuestra página. Puedes pedir que no se publique tu nombre. Las respuestas no son inmediatas: las compartimos en los espacios de Papás Presentes.\n\n👉 colegiominacion.com/papas-presentes\n\n#PapásPresentes #ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": "Las preguntas de ejemplo son ilustrativas."
+ },
+ {
+  "slug": "14-valores",
+  "fecha": "2026-11-23",
+  "hora": "13:00",
+  "tipo": "Carrusel",
+  "pilar": "Propuesta",
+  "estado": "listo",
+  "n": 6,
+  "caption": "En Mi Nación los valores no se memorizan: se viven. 💚\n\nD · Dignidad\nA · Agradecimiento\nR · Respeto\nR · Responsabilidad\n\nDesliza para ver cómo se ven en el día a día y cuéntanos: ¿cuál practican más en casa?\n\n#ValoresDARR #ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": ""
+ },
+ {
+  "slug": "15-papas-reel",
+  "fecha": "2026-11-25",
+  "hora": "17:00",
+  "tipo": "Reel",
+  "pilar": "Familias",
+  "estado": "levantamiento",
+  "n": 1,
+  "caption": "Nadie lo cuenta mejor que nuestras familias. 💚\n\n[Ajustar con sus respuestas]\n\n¿Quieres conocer el colegio? Pide informes por WhatsApp: 56 5292 2720\n\n#ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": "Portada lista. Falta grabar 3 familias, 45–60 s cada una. Fijar en posición 2."
+ },
+ {
+  "slug": "16-planteles",
+  "fecha": "2026-11-26",
+  "hora": "13:00",
+  "tipo": "Carrusel",
+  "pilar": "Admisiones",
+  "estado": "listo",
+  "n": 4,
+  "caption": "Estamos en dos planteles en Coyoacán 📍\n\n🌳 Preescolar · Fresno 172, Santa Úrsula Coapa, C.P. 04650\n🏫 Primaria · San Felipe MZ532 LT4 (271), Pedregal de Santa Úrsula, C.P. 04600\n\nAgenda tu visita por WhatsApp: 56 5292 2720\n\n#ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": "Reemplazar foto de primaria por la fachada cuando se grabe."
+ },
+ {
+  "slug": "17-agenda-visita",
+  "fecha": "2026-11-27",
+  "hora": "11:00",
+  "tipo": "Post",
+  "pilar": "Admisiones",
+  "estado": "listo",
+  "n": 1,
+  "caption": "¿Estás buscando escuela para el próximo ciclo? Este es buen momento para conocernos. 🗓️\n\nAgenda tu visita antes de las vacaciones de diciembre y resuelve tus dudas en persona.\n\n💬 WhatsApp: 56 5292 2720\n📞 55 5911 1865 (9:00 a. m. a 3:30 p. m.)\n\n#ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": ""
+ },
+ {
+  "slug": "18-cierre-lectura",
+  "fecha": "2026-11-29",
+  "hora": "18:00",
+  "tipo": "Post",
+  "pilar": "Papás Presentes",
+  "estado": "confirmar",
+  "n": 1,
+  "caption": "Terminamos noviembre con Hijos felices 📚 Gracias a todas las familias que leyeron con nosotros.\n\nMuy pronto te contamos cuál será la lectura de diciembre. 👀\n\n#PapásPresentes #ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": "Si Rocío confirma Educar con pasión, se anuncia el título."
+ },
+ {
+  "slug": "19-informes-reel",
+  "fecha": "2026-11-30",
+  "hora": "13:00",
+  "tipo": "Reel",
+  "pilar": "Admisiones",
+  "estado": "listo",
+  "video": "v/informes.mp4",
+  "caption": "¿Quieres información del colegio? Así de fácil la pides desde tu celular 📲\n\n1️⃣ Entra a colegiominacion.com\n2️⃣ Toca «Pedir informes»\n3️⃣ Elige WhatsApp, llamada o formulario\n\nTe contactamos pronto. 💚\n\n#ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": "Cyber Monday. Agregar audio en Instagram."
+ }
+]

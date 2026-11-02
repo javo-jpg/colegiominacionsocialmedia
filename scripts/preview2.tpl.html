@@ -1,0 +1,145 @@
+<title>Mi Nación · Noviembre 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@500;700;800&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+/* Layout: perfil de Instagram real arriba; debajo, cada publicación con sus láminas y copy, luego levantamientos y estrategia */
+:root{--verde:#235D4E;--claro:#DCE5B6;--amarillo:#EDCC6F;--azul:#549EBB;--crema:#FCF8EF;--coral:#E8836B;
+--bg:#FCF8EF;--surface:#FFFFFF;--fg:#1F2B27;--muted:#5B6862;--line:#E3E0D3;--ink:#235D4E;--chip:#EEF2DE;
+--display:"Albert Sans","Avenir Next","Segoe UI",system-ui,sans-serif;--body:"Hanken Grotesk","Segoe UI",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14201C;--surface:#1B2925;--fg:#EDEBE2;--muted:#A9B5AE;--line:#2C3B36;--ink:#CFE0A6;--chip:#24342F;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14201C;--surface:#1B2925;--fg:#EDEBE2;--muted:#A9B5AE;--line:#2C3B36;--ink:#CFE0A6;--chip:#24342F;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(1.5rem,3vw,2rem);color:var(--ink)}
+p{margin:0}
+.eyebrow{font-family:var(--display);font-weight:700;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+header.hero{background:#235D4E;color:#FCF8EF}
+header .inner{padding-block:36px 40px;display:grid;gap:18px}
+header h1{font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.03;color:#FCF8EF}
+header .eyebrow{color:#EDCC6F}
+header p{color:#DCE5B6;max-width:64ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px}
+.st{display:inline-block;font-size:.74rem;font-weight:600;padding:3px 10px;border-radius:12px;white-space:nowrap}
+.st.programado{background:#235D4E;color:#FCF8EF;outline:1px solid #DCE5B6}
+.st.material{background:#DCEBF2;color:#1F2B27}
+.st.levantamiento{background:#F6E6B6;color:#1F2B27}
+.st.confirmar{background:#F6D3C9;color:#1F2B27}
+section{padding-block:44px;border-bottom:1px solid var(--line)}
+.sec-head{display:grid;gap:6px;margin-bottom:22px}
+.sec-head p{color:var(--muted);max-width:68ch}
+.layout{display:grid;grid-template-columns:420px minmax(0,1fr);gap:36px;align-items:start}
+.layout>*{min-width:0}
+.phone{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:30px;padding:18px 0 0;overflow:hidden;position:sticky;top:16px}
+.prof{display:flex;gap:14px;align-items:center;padding:0 16px 10px}
+.avatar{width:66px;height:66px;border-radius:50%;background:#235D4E;display:grid;place-items:center;flex:none;outline:2px solid var(--amarillo);outline-offset:2px}
+.prof b{font-family:var(--display)}
+.mini{font-size:.82rem;color:var(--muted)}
+.bio{font-size:.86rem;padding:0 16px 10px}
+.bio span{color:var(--azul);font-weight:600}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:0 16px 12px}
+.btns span{background:var(--chip);border-radius:8px;text-align:center;font-weight:600;font-size:.85rem;padding:6px}
+.hl{display:flex;gap:12px;overflow-x:auto;padding:4px 16px 14px}
+.hl figure{margin:0;text-align:center;flex:none;width:62px}
+.hl img{width:58px;height:58px;border-radius:50%;border:2px solid var(--line);padding:2px;background:var(--surface)}
+.hl figcaption{font-size:.66rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.tile{position:relative;aspect-ratio:3/4;display:block;overflow:hidden;background:#ddd}
+.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}
+.tile:hover img,.tile:focus-visible img{transform:scale(1.04)}
+.tile .b{position:absolute;top:6px;right:8px;color:#fff;font-size:.9rem;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.tile .pin{position:absolute;top:6px;left:6px;background:#FCF8EF;color:#235D4E;font-size:.55rem;font-weight:700;padding:2px 6px;border-radius:8px}
+.posts{display:grid;gap:18px;min-width:0}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:12px;min-width:0;scroll-margin-top:16px}
+.post header{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center}
+.when{display:grid;margin-right:auto}
+.when b{font-family:var(--display);font-size:1.1rem;color:var(--ink)}
+.when span{font-size:.82rem;color:var(--muted)}
+.pil{font-size:.74rem;font-weight:600;padding:3px 10px;border-radius:12px;border:1.5px solid var(--c);color:var(--fg)}
+.slides{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}
+.slides img,.slides video{height:300px;width:auto;border-radius:8px;flex:none;scroll-snap-align:start;background:#000}
+.slides video{width:169px;object-fit:cover}
+details summary{cursor:pointer;font-weight:600;color:var(--ink)}
+pre{white-space:pre-wrap;font-family:var(--body);font-size:.92rem;background:var(--chip);padding:12px 14px;border-radius:10px;margin:10px 0}
+button{font:inherit;font-weight:600;background:var(--verde);color:#FCF8EF;border:0;border-radius:20px;padding:6px 14px;cursor:pointer}
+button:focus-visible,.tile:focus-visible{outline:3px solid var(--azul);outline-offset:2px}
+.nota{font-size:.88rem;color:var(--muted);border-left:3px solid var(--amarillo);padding-left:10px}
+.lev{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:8px;align-content:start;min-width:0}
+.card h3{color:var(--ink)}
+.card .when2{font-family:var(--display);font-weight:800;font-size:.78rem;letter-spacing:.1em;color:var(--coral)}
+.card ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:.92rem}
+.card p{color:var(--muted);font-size:.92rem}
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.check{display:grid;gap:8px;padding:0;list-style:none;margin:0;counter-reset:c}
+.check li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 14px 10px 46px;position:relative;counter-increment:c}
+.check li::before{content:counter(c);position:absolute;left:12px;top:10px;width:24px;height:24px;border-radius:50%;background:var(--verde);color:#FCF8EF;font-size:.75rem;font-weight:700;display:grid;place-items:center}
+footer{padding-block:28px 48px;color:var(--muted);font-size:.85rem}
+@media (max-width:900px){.layout,.lev,.three{grid-template-columns:1fr}.phone{position:static;max-width:440px;margin:0 auto}.slides img,.slides video{height:240px}.slides video{width:135px}}
+@media (prefers-reduced-motion:reduce){.tile img{transition:none}}
+</style>
+
+<header class="hero"><div class="wrap inner">
+  <div class="eyebrow">Colegio Mi Nación · Instagram y Facebook</div>
+  <h1>Noviembre 2026, pieza por pieza</h1>
+  <p>__N__ publicaciones diseñadas con la marca: fotos de las ofrendas y del plantel de preescolar, capturas de la nueva web e ilustraciones. Las que dependen de grabar algo traen portada y guion; abajo está la lista de levantamientos.</p>
+  <div class="legend"><span class="st programado">Programado</span><span class="st material">Listo para programar</span><span class="st confirmar">Confirmar con Rocío</span><span class="st levantamiento">Falta grabar</span></div>
+</div></header>
+
+<main>
+<section><div class="wrap layout">
+  <div class="phone" aria-label="Vista previa del perfil">
+    <div class="prof">
+      <div class="avatar" aria-hidden="true"><svg width="42" height="42" viewBox="0 0 40 40" fill="none" stroke="#DCE5B6" stroke-width="3" stroke-linecap="round"><path d="M6 20a14 12 0 0 0 28 0"/><circle cx="20" cy="22" r="4"/><path d="M20 26v6M11 9l2 4M20 6v5M29 9l-2 4M5 15l3 2M35 15l-3 2"/></svg></div>
+      <div><b>colegio.mi.nacion</b><div class="mini">Preescolar y primaria · Coyoacán</div></div>
+    </div>
+    <p class="bio">Preescolar y primaria en Coyoacán 🇲🇽<br>Español · Inglés · Francés<br>Formando corazones y mentes para un mejor futuro<br>📲 Pide informes 👇<br><span>colegiominacion.com</span></p>
+    <div class="btns"><span>WhatsApp</span><span>Llamar</span></div>
+    <div class="hl">__HL__</div>
+    <div class="grid">__GRID__</div>
+  </div>
+  <div class="posts">
+    <div class="sec-head"><div class="eyebrow">Publicaciones</div><h2>Calendario con piezas</h2><p>Toca una portada del perfil para ir a su publicación. Desliza las láminas a la derecha. Los reels se pueden reproducir aquí.</p></div>
+    __CARDS__
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">Para el equipo de levantamiento</div><h2>Lo que necesitamos grabar</h2><p>Cada toma tiene destino en la parrilla. Video vertical 4K, tomas de 3 a 5 s, audio limpio en testimonios. Antes de grabar: lista de alumnos sin autorización y quién los identifica en sitio.</p></div>
+  <div class="lev">
+    <div class="card"><span class="when2">YA · SIN GRABAR</span><h3>Clips crudos de las entrevistas de ofrendas</h3><ul><li>Los videos originales con audio (Drive, carpeta Primaria) para el recap v2 con las voces de los niños y subtítulos.</li><li>Los clips de entrevistas que Armando grabó antes a alumnos y maestras.</li><li>Cualquier material grabado anteriormente del colegio.</li></ul></div>
+    <div class="card"><span class="when2">10–12 NOV · PREESCOLAR FRESNO</span><h3>Un día en preescolar + maestras</h3><ul><li>Llegada, círculo de bienvenida, canción en inglés y francés, LUCA, recreo, salida (reel 14 nov, sustituye la versión con fotos).</li><li>2 maestras, 20–30 s: “¿Qué es lo que más te gusta de enseñar aquí?” (reel 17 nov).</li><li>Fachada y calle de Fresno 172.</li></ul></div>
+    <div class="card"><span class="when2">10–12 NOV · PRIMARIA SAN FELIPE</span><h3>Aliados, familias y Rocío</h3><ul><li>Una foto por aliado en uso: Innovamat, LUCA, Hachette, Tekman, Nat Geo, Música (carrusel 19 nov).</li><li>3 familias, 45–60 s: ¿por qué Mi Nación?, ¿desde cuándo?, ¿qué ha cambiado en su hijo? (reel fijado 25 nov).</li><li>2 maestras de primaria; clase de inglés y de francés.</li><li>Rocío, 45 s: qué es Papás Presentes y el libro del mes.</li><li>Fachada de San Felipe (carrusel 26 nov).</li></ul></div>
+    <div class="card"><span class="when2">19–20 NOV · SI HAY ACTIVIDAD</span><h3>20 de noviembre</h3><ul><li>Desfile, actividad deportiva o festival: 10–15 fotos y 5 clips. Sustituye el post ilustrado.</li></ul></div>
+    <div class="card"><span class="when2">DICIEMBRE · FECHA POR CONFIRMAR</span><h3>Festival o posada navideña</h3><ul><li>Cobertura completa con 2 personas: reel, carrusel e historias en vivo.</li><li>Entrevistas cortas a familias para la campaña de inscripciones.</li></ul></div>
+    <div class="card"><span class="when2">CADA SEMANA</span><h3>Fotos del día a día</h3><p>Las maestras pueden mandar 5 a 8 fotos o clips por semana de lo que pase en clase. Con eso mantenemos historias diarias sin esperar un rodaje.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">Perfil que convierte</div><h2>Fijados, destacadas y medición</h2></div>
+  <div class="three">
+    <div class="card"><h3>Fijados</h3><ul><li><b>1.</b> ¿Cómo pedir informes? (12 nov)</li><li><b>2.</b> Reel de familias (25 nov). Mientras, el recap.</li><li><b>3.</b> Papás Presentes (7 nov)</li></ul></div>
+    <div class="card"><h3>Destacadas</h3><p>Informes, Preescolar, Primaria, Idiomas, Aliados, Papás, Familias y Vida MN. Las portadas ya están en el repositorio.</p></div>
+    <div class="card"><h3>Qué medimos</h3><p>Solicitudes de informes que llegan por redes, clics al link, alcance a no seguidores, guardados y compartidos. Reporte cada lunes y ajuste el 16 de noviembre.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">Para destrabar</div><h2>Pendientes con Rocío</h2></div>
+  <ol class="check">
+    <li>Confirmar permisos de imagen de los alumnos que salen en el recap (carrusel y reel).</li>
+    <li>Lectura de noviembre (Hijos felices) y de diciembre.</li>
+    <li>¿Habrá promoción de Buen Fin? Si no, sale el post de la semana sin costo.</li>
+    <li>Calendario de actividades de noviembre y diciembre, y fecha del festival.</li>
+    <li>Fechas y proceso de inscripción 2027–2028.</li>
+  </ol>
+</div></section>
+</main>
+<footer><div class="wrap">Archivos finales en alta resolución en el repositorio colegiominacionsocialmedia, carpeta assets/2026-11.</div></footer>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>{const t=document.getElementById(b.dataset.copy).textContent;
+const ok=()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar copy',1500)};
+try{navigator.clipboard.writeText(t).then(ok,()=>{const r=document.createRange();r.selectNodeContents(document.getElementById(b.dataset.copy));getSelection().removeAllRanges();getSelection().addRange(r)})}catch(e){}}));
+</script>
