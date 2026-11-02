@@ -1,5 +1,16 @@
 [
  {
+  "slug": "02-reel-recap",
+  "fecha": "2026-11-02",
+  "hora": "16:12",
+  "tipo": "Reel",
+  "pilar": "Vida MN",
+  "estado": "programado",
+  "video": "v/recap.mp4",
+  "caption": "Así se vivió el Día de Muertos en Mi Nación 💀🌼\n\nOfrendas hechas por nuestros alumnos, una presentación inspirada en Michael Jackson y toda la comunidad reunida.\n\nGracias a las familias, alumnos y maestros que lo hicieron posible. 💚\n\n#ColegioMiNación #Coyoacán #Preescolar #Primaria",
+  "nota": "Publicado hoy 2 nov a las 4:12 p. m. Motion graphics a pantalla completa, ofrendas con fotos originales en alta resolución. Música: Güerita, Epidemic Sound."
+ },
+ {
   "slug": "01-ofrendas",
   "fecha": "2026-11-02",
   "hora": "18:00",
@@ -8,17 +19,6 @@
   "estado": "programado",
   "caption": "Este Día de Muertos, preescolar y primaria llenaron el colegio de color, memoria y tradición. 🌼\n\nLas familias nos acompañaron a recorrer las ofrendas y los trabajos que prepararon los alumnos para recordar a quienes queremos.\n\nGracias, comunidad Mi Nación, por mantener viva esta tradición con nosotros. 🧡\n\n¿Quieres conocer el colegio? Pide informes por WhatsApp: 56 5292 2720\n\n#ColegioMiNación #DíaDeMuertos #Coyoacán",
   "nota": "Programado en Metricool con 8 imágenes. Rocío confirma permisos antes de las 6:00 p. m."
- },
- {
-  "slug": "02-reel-recap",
-  "fecha": "2026-11-03",
-  "hora": "13:00",
-  "tipo": "Reel",
-  "pilar": "Vida MN",
-  "estado": "confirmar",
-  "video": "v/recap.mp4",
-  "caption": "Así se vivió el Día de Muertos en Mi Nación 💀🌼\n\nOfrendas hechas por nuestros alumnos, una presentación inspirada en Michael Jackson y toda la comunidad reunida.\n\nGracias a las familias, alumnos y maestros que lo hicieron posible. 💚\n\n#ColegioMiNación #Coyoacán #Preescolar #Primaria",
-  "nota": "v3 motion graphics: video a pantalla completa, texto animado en tarjetas entre tomas y sobre los detalles; las tomas con niños van limpias. Música: Güerita, Epidemic Sound. Pendiente: agregar las voces de los alumnos (faltan los clips originales con audio). Se programa en cuanto quede."
  },
  {
   "slug": "03-nueva-web",
@@ -37,7 +37,7 @@
   "hora": "11:00",
   "tipo": "Carrusel",
   "pilar": "Papás Presentes",
-  "estado": "confirmar",
+  "estado": "programado",
   "n": 4,
   "caption": "Ser papá o mamá también se aprende, y nadie tiene que hacerlo solo. 💛\n\nPresentamos Papás Presentes, un espacio gratuito de Colegio Mi Nación para todas las familias, sean o no parte del colegio:\n📚 Un libro cada mes\n💬 Preguntas para Rocío\n🏡 Ideas y actividades para casa\n🤝 Encuentros para conversar\n\nEste mes leemos Hijos felices, de Sixto Porras.\n\nEntra a colegiominacion.com/papas-presentes 👈\n\n#PapásPresentes #ColegioMiNación #Coyoacán #Preescolar #Primaria",
   "nota": "Confirmar con Rocío que Hijos felices es la lectura de noviembre."
@@ -70,7 +70,7 @@
   "hora": "13:00",
   "tipo": "Post",
   "pilar": "Admisiones",
-  "estado": "confirmar",
+  "estado": "programado",
   "n": 1,
   "caption": "Este Buen Fin, mientras todos buscan ofertas, te invitamos a algo que vale más: conocer dónde puede crecer tu hijo. 💚\n\nVive una semana de experiencia sin costo en Colegio Mi Nación (sujeto a disponibilidad).\n\nPide informes por WhatsApp: 56 5292 2720\n\n#BuenFin #ColegioMiNación #Coyoacán #Preescolar #Primaria",
   "nota": "Confirmar con Rocío si habrá alguna promoción real; si no, se publica así."
@@ -84,7 +84,7 @@
   "estado": "programado",
   "n": 1,
   "caption": "Así es nuestro preescolar en Fresno 172, Santa Úrsula Coapa 🌳\n\nUn espacio para jugar, explorar y aprender en tres idiomas.\n\n¿Quieres conocerlo en persona? Agenda tu visita por WhatsApp: 56 5292 2720\n\n#Preescolar #Kinder #ColegioMiNación #Coyoacán #Preescolar #Primaria",
-  "nota": "Versión con fotos del plantel. Se reemplaza con 'Un día en preescolar' cuando haya levantamiento. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound.",
+  "nota": "Versión con fotos del plantel. Se reemplaza con 'Un día en preescolar' cuando haya levantamiento. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound.",
   "video": "v/preescolar.mp4"
  },
  {
@@ -192,7 +192,7 @@
   "hora": "18:00",
   "tipo": "Post",
   "pilar": "Papás Presentes",
-  "estado": "confirmar",
+  "estado": "programado",
   "n": 1,
   "caption": "Terminamos noviembre con Hijos felices 📚 Gracias a todas las familias que leyeron con nosotros.\n\nMuy pronto te contamos cuál será la lectura de diciembre. 👀\n\n#PapásPresentes #ColegioMiNación #Coyoacán #Preescolar #Primaria",
   "nota": "Si Rocío confirma Educar con pasión, se anuncia el título."
