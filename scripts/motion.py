@@ -61,13 +61,22 @@ def render(name, dur, bg, elements, extra=None):
     else: run(f"ffmpeg -v error -y -framerate {FPS} -i {d}%04d.png -c:v qtrle {out}")
     return out
 
+SELLO = "/home/claude/reel/mg_sello.png"   # logo fijo, dentro de zona segura, no se mueve con el zoom
+SX, SY = 830, 290
 def clip(start, dur, out, crop=None, zoom=0.04, overlay=None):
-    vf = (f"crop={crop[0]}:{crop[1]}:{crop[2]}:{crop[3]}," if crop else "") + \
+    vf = "delogo=x=895:y=25:w=160:h=155," + (f"crop={crop[0]}:{crop[1]}:{crop[2]}:{crop[3]}," if crop else "") + \
          f"scale=w='trunc({Wr}*(1+{zoom}*t/{dur})/2)*2':h='trunc({Hr}*(1+{zoom}*t/{dur})/2)*2':eval=frame:flags=lanczos,crop={Wr}:{Hr},setsar=1"
+    logo_in = "" if crop else f" -i {SELLO}"
+    chain = f"[0]{vf}[v]"
+    last = "[v]"
+    if not crop:
+        chain += f";{last}[{1}]overlay={SX}:{SY}[l]"; last = "[l]"
     if overlay:
-        run(f"ffmpeg -v error -y -ss {start} -t {dur} -i {S} -i {overlay} -filter_complex \"[0]{vf}[v];[v][1]overlay=eof_action=pass,format=yuv420p\" -t {dur} -r {FPS} -an -c:v libx264 -preset veryfast -crf 18 {out}")
-    else:
-        run(f"ffmpeg -v error -y -ss {start} -t {dur} -i {S} -vf \"{vf},format=yuv420p\" -t {dur} -r {FPS} -an -c:v libx264 -preset veryfast -crf 18 {out}")
+        idx = 2 if not crop else 1
+        chain += f";{last}[{idx}]overlay=eof_action=pass[o]"; last = "[o]"
+    chain += f";{last}format=yuv420p[out]"
+    ov_in = f" -i {overlay}" if overlay else ""
+    run(f"ffmpeg -v error -y -ss {start} -t {dur} -i {S}{logo_in}{ov_in} -filter_complex \"{chain}\" -map \"[out]\" -t {dur} -r {FPS} -an -c:v libx264 -preset veryfast -crf 18 {out}")
     return out
 
 MJ = lambda s: font(MIJA, s)
@@ -87,7 +96,7 @@ ov = render("o3", 3.5, None, [
 for k, s in enumerate([2.0, 3.6, 6.0, 9.5, 18.6]): clip(s, .7, T + f"d{k}.mp4", DET, .06)
 open(T + "d.txt", "w").write("".join(f"file '{T}d{k}.mp4'\n" for k in range(5)))
 run(f"ffmpeg -v error -y -f concat -safe 0 -i {T}d.txt -c copy {T}dcat.mp4")
-run(f"ffmpeg -v error -y -i {T}dcat.mp4 -i {ov} -filter_complex \"[0][1]overlay=eof_action=pass,format=yuv420p\" -c:v libx264 -preset veryfast -crf 18 -an {T}v3.mp4")
+run(f"ffmpeg -v error -y -i {T}dcat.mp4 -i {SELLO} -i {ov} -filter_complex \"[0][1]overlay={SX}:{SY}[a];[a][2]overlay=eof_action=pass,format=yuv420p\" -c:v libx264 -preset veryfast -crf 18 -an {T}v3.mp4")
 parts.append(T + "v3.mp4")
 # 4. tarjeta entrevistas
 parts.append(render("c4", 1.5, LG, [
