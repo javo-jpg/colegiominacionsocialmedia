@@ -55,7 +55,17 @@ for f in sorted(glob.glob("/home/claude/colegiominacionsocialmedia/assets/highli
     hl.append(f'<figure><img src="data:image/jpeg;base64,{base64.b64encode(b.getvalue()).decode()}" alt=""><figcaption>{ {"papas":"Papás","vida-mn":"Vida MN"}.get(n, n.capitalize()) }</figcaption></figure>')
 tpl = open("/home/claude/scripts/preview2.tpl.html").read()
 from solicitudes import render as sol_render
-out = tpl.replace("__SOL__", sol_render()).replace("__GRID__", "".join(grid)).replace("__CARDS__", "".join(cards)).replace("__HL__", "".join(hl)).replace("__N__", str(len(allp)))
+def stories_html():
+    ss = sorted(json.load(open("/home/claude/colegiominacionsocialmedia/plan/2026-11/stories.json")), key=lambda s: (s["fecha"], s["hora"]))
+    weeks = {}
+    for s in ss:
+        d = datetime.date.fromisoformat(s["fecha"]); wk = d - datetime.timedelta(days=d.weekday()); weeks.setdefault(wk, []).append(s)
+    out = []
+    for wk, items in weeks.items():
+        figs = "".join(f'<figure><img src="{thumb(A + s["file"], 260)}" alt="" loading="lazy"><figcaption><b>{fmt(s["fecha"])} · {s["hora"]}</b>{s["uso"]}</figcaption></figure>' for s in items)
+        out.append(f'<div class="wk2">Semana del {wk.day} de noviembre</div><div class="stw">{figs}</div>')
+    return "".join(out)
+out = tpl.replace("__STORIES__", stories_html()).replace("__SOL__", sol_render()).replace("__GRID__", "".join(grid)).replace("__CARDS__", "".join(cards)).replace("__HL__", "".join(hl)).replace("__N__", str(len(allp)))
 os.makedirs("/home/claude/prev", exist_ok=True)
 open("/home/claude/prev/preview-noviembre.html", "w").write(out)
 json.dump([{k: v for k, v in p.items() if k != "files"} for p in allp], open("/home/claude/colegiominacionsocialmedia/plan/2026-11/posts.json", "w"), ensure_ascii=False, indent=1)
