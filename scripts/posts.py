@@ -104,29 +104,29 @@ def L_cta(bg=C, fg=G, acc=G, title="¿Quieres conocer el colegio?", body="Pide i
     page_dots(d, n, i, H - 40, fg, (200, 200, 190))
     return im
 
-def L_reel_cover(photo, title, eyebrow_t, focus=(.5, .5), acc=Y, sub=None):
-    Wr, Hr = 1080, 1920
-    im = cover(photo, Wr, Hr, focus).convert("RGBA")
-    shade = Image.new("RGBA", (Wr, Hr), (20, 52, 44, 0)); g = Image.new("L", (1, Hr))
-    for y in range(Hr): g.putpixel((0, y), int(max(0, (y - Hr * .35) / (Hr * .65)) * 210))
-    shade.putalpha(g.resize((Wr, Hr))); im.alpha_composite(shade); d = ImageDraw.Draw(im)
-    # keep text inside the 3:4 grid crop (y 225..1665)
-    f = fit_font(d, title, MIJA, Wr - 160, 3, 100, 60); lines = wrap(d, title, f, Wr - 160)
-    y = 1580 - len(lines) * f.size * 1.08 - (60 if sub else 0)
-    pill(d, (80, y - 80), eyebrow_t, font(SB, 30), acc, G)
-    y = text_block(d, (80, y), title, f, C, Wr - 160, 1.08)
-    if sub: d.text((80, y + 12), sub, font=font(SL, 38), fill=LG)
-    lg = logo("verdeclaro", 220); im.paste(lg, (80, 250), lg)
-    return im.convert("RGB")
+# Zona segura Reels/Historias 1080x1920: texto solo en x 80-960 y y 270-1500.
+# La cuadrícula del perfil recorta la portada a 3:4 (y 240-1680).
+RSAFE = (80, 270, 960, 1500)
+def L_reel_cover(photo, title, eyebrow_t, focus=(.5, .5), acc=Y, sub=None, bg=G):
+    Wr, Hr, VH = 1080, 1920, 1080
+    im = Image.new("RGB", (Wr, Hr), bg); im.paste(cover(photo, Wr, VH, focus), (0, 0)); d = ImageDraw.Draw(im)
+    picado(d, Wr, VH, 12, [Y, P, B, LG], bg, h=70)
+    y = VH + 100; pill(d, (80, y), eyebrow_t, font(SB, 30), acc, G); y += 84
+    f = fit_font(d, title, MIJA, RSAFE[2] - 80, 2, 84, 56)
+    y = text_block(d, (80, y), title, f, C, RSAFE[2] - 80, 1.08)
+    if sub: d.text((80, y + 8), sub, font=font(SL, 36), fill=LG); y += 50
+    assert y <= RSAFE[3], ("reel cover fuera de zona segura", title, y)
+    return im
 
 def L_reel_card(bg, title, eyebrow_t, ic=None, sub=None):
     Wr, Hr = 1080, 1920
     im = Image.new("RGB", (Wr, Hr), bg); d = ImageDraw.Draw(im)
-    picado(d, Wr, 225, 7, [Y, P, B, LG], bg)
-    y = 620
-    if ic: icn = icon(ic, 170, Y, bg); im.paste(icn, (80, y), icn); y += 210
+    picado(d, Wr, 0, 7, [Y, P, B, LG], bg, h=150)
+    lg = logo("verdeclaro", 240); im.paste(lg, (80, 300), lg)
+    y = 560
+    if ic: icn = icon(ic, 150, Y, bg); im.paste(icn, (80, y), icn); y += 185
     pill(d, (80, y), eyebrow_t, font(SB, 30), Y, G); y += 90
-    f = fit_font(d, title, MIJA, Wr - 160, 4, 104, 60); y = text_block(d, (80, y), title, f, C, Wr - 160, 1.08)
-    if sub: text_block(d, (80, y + 20), sub, font(SL, 38), LG, Wr - 160, 1.3)
-    lg = logo("verdeclaro", 240); im.paste(lg, (80, 1560), lg)
+    f = fit_font(d, title, MIJA, RSAFE[2] - 80, 4, 100, 60); y = text_block(d, (80, y), title, f, C, RSAFE[2] - 80, 1.08)
+    if sub: y = text_block(d, (80, y + 20), sub, font(SL, 38), LG, RSAFE[2] - 80, 1.3)
+    assert y <= RSAFE[3], ("reel card fuera de zona segura", title, y)
     return im

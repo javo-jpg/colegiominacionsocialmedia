@@ -6,7 +6,7 @@ T = "/home/claude/reel/tmp/"; os.makedirs(T, exist_ok=True)
 Wr, Hr = 1080, 1920
 def run(c): subprocess.run(c, shell=True, check=True)
 
-def caption_png(lines, path, tagtxt=None, y=1330):
+def caption_png(lines, path, tagtxt=None, y=1290):
     im = Image.new("RGBA", (Wr, Hr), (0, 0, 0, 0)); d = ImageDraw.Draw(im); f = font(SB, 54)
     ws = [d.textlength(l, font=f) for l in lines]; w = max(ws) + 88; h = len(lines) * 62 + 52
     if tagtxt:
@@ -33,12 +33,12 @@ def concat(parts, out):
     open(T + "l.txt", "w").write("".join(f"file '{p}'\n" for p in parts))
     run(f"ffmpeg -v error -y -f concat -safe 0 -i {T}l.txt -c copy -movflags +faststart {out}")
 
-def end_card():
-    im = Image.open("/home/claude/reel/ov/end.png"); return im
+from reels_end import end_card_safe
+def end_card(): return end_card_safe()
 
 # ---- 02 recap cover ----
 os.makedirs(A + "02-reel-recap", exist_ok=True)
-L_reel_cover(Image.open("/home/claude/media/vid_37.5.jpg"), "Así se vivió el Día de Muertos en Mi Nación", "Recap", (.5, .5)).save(A + "02-reel-recap/portada.jpg", quality=92)
+L_reel_cover(Image.open("/home/claude/media/vid_15.5.jpg"), "Así se vivió el Día de Muertos", "Recap", (.5, .25)).save(A + "02-reel-recap/portada.jpg", quality=92)
 
 # ---- 08 preescolar reel ----
 if "08" in sys.argv or len(sys.argv) == 1:
@@ -46,7 +46,7 @@ if "08" in sys.argv or len(sys.argv) == 1:
     caption_png(["Así es nuestro preescolar"], T + "c1.png", "FRESNO 172")
     caption_png(["Espacios para jugar", "y explorar"], T + "c2.png")
     caption_png(["Tradiciones que vivimos", "en comunidad"], T + "c3.png")
-    caption_png(["Familias que nos acompañan"], T + "c4.png")
+    caption_png(["Familias que nos acompañan"], T + "c4.png", y=380)
     caption_png(["Español · Inglés · Francés"], T + "c5.png", "TRES IDIOMAS")
     still_clip(PH("juegos2.jpg"), 3.0, T + "p1.mp4", T + "c1.png")
     still_clip(PH("juegos1.jpg"), 2.6, T + "p2.mp4", T + "c2.png", (1.08, 1.0))
@@ -61,10 +61,11 @@ if "19" in sys.argv or len(sys.argv) == 1:
     os.makedirs(A + "19-informes-reel", exist_ok=True)
     def phone_card(shot, crop, title, eyebrow_t, bg=G, fg=C, acc=Y, step=None):
         im = Image.new("RGB", (Wr, Hr), bg); d = ImageDraw.Draw(im)
-        if step: pill(d, (80, 250), step, font(SB, 34), acc, C if acc == G else G)
-        f = fit_font(d, title, MIJA, Wr - 160, 2, 92, 60); y = text_block(d, (80, 340), title, f, fg, Wr - 160, 1.08)
-        d.text((80, y + 14), eyebrow_t, font=font(SL, 40), fill=LG if bg == G else INK)
-        s = PH(shot).crop(crop); ph = phone_frame(s, 1180); im.paste(ph, ((Wr - ph.width) // 2, Hr - ph.height + 80), ph)
+        if step: pill(d, (80, 290), step, font(SB, 34), acc, C if acc == G else G)
+        f = fit_font(d, title, MIJA, 880, 2, 88, 60); y = text_block(d, (80, 380), title, f, fg, 880, 1.08)
+        y = text_block(d, (80, y + 14), eyebrow_t, font(SL, 40), LG if bg == G else INK, 880, 1.25)
+        s = PH(shot).crop(crop); avail = 1500 - (int(y) + 40) - 40
+        ph = phone_frame(s, avail); im.paste(ph, ((Wr - ph.width) // 2, int(y) + 30), ph)
         return im
     cov = L_reel_card(G, "Pide informes en 30 segundos desde tu celular", "Tutorial", "phone", "colegiominacion.com")
     cov.save(A + "19-informes-reel/portada.jpg", quality=92)

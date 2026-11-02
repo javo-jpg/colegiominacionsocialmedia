@@ -44,7 +44,7 @@ for name,(W,H) in {"01-portada.jpg":(1080,1080),"story-portada.jpg":(1080,1920)}
         d.text((80,y),ln,font=f1,fill=C); y+=128
     d.text((80,y+30),"Preescolar Fresno · Primaria San Felipe",font=f3,fill=LG)
     lg=logo(BR+"logo-horizontal-verdeclaro.png",330)
-    im.paste(lg,(80,H-lg.height-(80 if H==1080 else 300)),lg)
+    im.paste(lg,(80,H-lg.height-(80 if H==1080 else 440)),lg)
     if H==1080:
         d.text((W-130,H-112),"Desliza",font=f2,fill=Y,anchor="ra")
         ay=H-92; d.line([(W-118,ay),(W-80,ay)],fill=Y,width=5); d.polygon([(W-80,ay-12),(W-64,ay),(W-80,ay+12)],fill=Y)
