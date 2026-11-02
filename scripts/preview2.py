@@ -6,13 +6,13 @@ TAGS = "#ColegioMiNación #Coyoacán #Preescolar #Primaria"
 extra = [
  dict(slug="01-ofrendas", fecha="2026-11-02", hora="18:00", tipo="Carrusel", pilar="Vida MN", estado="programado", caption="Este Día de Muertos, preescolar y primaria llenaron el colegio de color, memoria y tradición. 🌼\n\nLas familias nos acompañaron a recorrer las ofrendas y los trabajos que prepararon los alumnos para recordar a quienes queremos.\n\nGracias, comunidad Mi Nación, por mantener viva esta tradición con nosotros. 🧡\n\n¿Quieres conocer el colegio? Pide informes por WhatsApp: 56 5292 2720\n\n#ColegioMiNación #DíaDeMuertos #Coyoacán", nota="Programado en Metricool con 8 imágenes. Rocío confirma permisos antes de las 6:00 p. m.",
       files=[A+"01-ofrendas/01-portada.jpg", "/home/claude/media/altar_kinder.jpg", "/home/claude/media/altar_primaria.jpg", "/home/claude/media/patio_familias.jpg", "/home/claude/media/cempasuchil.jpg", A+"01-ofrendas/99-cta.jpg"]),
- dict(slug="02-reel-recap", fecha="2026-11-03", hora="13:00", tipo="Reel", pilar="Vida MN", estado="listo", video="v/recap.mp4", caption=f"Así se vivió el Día de Muertos en Mi Nación 💀🌼\n\nOfrendas hechas por nuestros alumnos, una presentación inspirada en Michael Jackson y toda la comunidad reunida.\n\nGracias a las familias, alumnos y maestros que lo hicieron posible. 💚\n\n{TAGS}", nota="v1 sin voces de los niños (el video de la agencia trae música encima). Falta música: agregar desde la biblioteca de Instagram. v2 con audio original si nos pasan los clips crudos.",
+ dict(slug="02-reel-recap", fecha="2026-11-03", hora="13:00", tipo="Reel", pilar="Vida MN", estado="listo", video="v/recap.mp4", caption=f"Así se vivió el Día de Muertos en Mi Nación 💀🌼\n\nOfrendas hechas por nuestros alumnos, una presentación inspirada en Michael Jackson y toda la comunidad reunida.\n\nGracias a las familias, alumnos y maestros que lo hicieron posible. 💚\n\n{TAGS}", nota="v3 motion graphics: video a pantalla completa, texto animado en tarjetas entre tomas y sobre los detalles; las tomas con niños van limpias. Música: Güerita, Epidemic Sound. Las voces de los niños entran cuando tengamos los clips crudos.",
       files=[A+"02-reel-recap/portada.jpg"]),
- dict(slug="19-informes-reel", fecha="2026-11-30", hora="13:00", tipo="Reel", pilar="Admisiones", estado="listo", video="v/informes.mp4", caption=f"¿Quieres información del colegio? Así de fácil la pides desde tu celular 📲\n\n1️⃣ Entra a colegiominacion.com\n2️⃣ Toca «Pedir informes»\n3️⃣ Elige WhatsApp, llamada o formulario\n\nTe contactamos pronto. 💚\n\n{TAGS}", nota="Cyber Monday. Agregar audio en Instagram.", files=[A+"19-informes-reel/portada.jpg"]),
+ dict(slug="19-informes-reel", fecha="2026-11-30", hora="13:00", tipo="Reel", pilar="Admisiones", estado="listo", video="v/informes.mp4", caption=f"¿Quieres información del colegio? Así de fácil la pides desde tu celular 📲\n\n1️⃣ Entra a colegiominacion.com\n2️⃣ Toca «Pedir informes»\n3️⃣ Elige WhatsApp, llamada o formulario\n\nTe contactamos pronto. 💚\n\n{TAGS}", nota="Cyber Monday. Música: Pearl City Beach, Epidemic Sound.", files=[A+"19-informes-reel/portada.jpg"]),
 ]
 for p in posts:
     p["files"] = sorted(glob.glob(A + p["slug"] + "/*.jpg"))
-    if p["slug"] == "08-preescolar-reel": p["video"] = "v/preescolar.mp4"
+    if p["slug"] == "08-preescolar-reel": p["video"] = "v/preescolar.mp4"; p["nota"] = p.get("nota", "") + " Música: Happy 4 U, Epidemic Sound."
     if p["slug"] == "04-papas-presentes": p["fecha"] = "2026-11-07"
 allp = sorted(extra + posts, key=lambda p: p["fecha"])
 # move reel recap date: Nov 3 (calendar slot 4 nov originally). keep.
@@ -40,7 +40,7 @@ cards = []
 for p in allp:
     lab, cls = est[p["estado"]]
     slides = "".join(f'<img src="{thumb(f, 300)}" alt="Lámina {k+1}" loading="lazy">' for k, f in enumerate(p["files"]))
-    vid = f'<video src="{p["video"]}" controls muted playsinline preload="metadata" poster="{thumb(p["files"][0], 300)}"></video>' if p.get("video") else ""
+    vid = f'<video src="{p["video"]}" controls playsinline preload="metadata" poster="{thumb(p["files"][0], 300)}"></video>' if p.get("video") else ""
     title = p["caption"].split("\n")[0]
     cards.append(f'''<article class="post" id="{p["slug"]}">
 <header><div class="when"><b>{fmt(p["fecha"])}</b><span>{p["hora"]} · {p["tipo"]}{" · "+str(len(p["files"]))+" láminas" if len(p["files"])>1 else ""}</span></div>
