@@ -1,0 +1,272 @@
+[
+ {
+  "file": "stories-v2/hl-informes-1.mp4",
+  "poster": "stories-v2/hl-informes-1.jpg",
+  "name": "hl-informes-1",
+  "fecha": "2026-11-03",
+  "hora": "09:00",
+  "uso": "Destacada: Informes",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/hl-informes-2.mp4",
+  "poster": "stories-v2/hl-informes-2.jpg",
+  "name": "hl-informes-2",
+  "fecha": "2026-11-03",
+  "hora": "19:00",
+  "uso": "Destacada: Informes",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/hl-informes-3.mp4",
+  "poster": "stories-v2/hl-informes-3.jpg",
+  "name": "hl-informes-3",
+  "fecha": "2026-11-04",
+  "hora": "09:00",
+  "uso": "Destacada: Informes",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/hl-preescolar-1.mp4",
+  "poster": "stories-v2/hl-preescolar-1.jpg",
+  "name": "hl-preescolar-1",
+  "fecha": "2026-11-04",
+  "hora": "19:00",
+  "uso": "Destacada: Preescolar",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/hl-preescolar-2.mp4",
+  "poster": "stories-v2/hl-preescolar-2.jpg",
+  "name": "hl-preescolar-2",
+  "fecha": "2026-11-05",
+  "hora": "09:00",
+  "uso": "Destacada: Preescolar",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/hl-primaria-1.mp4",
+  "poster": "stories-v2/hl-primaria-1.jpg",
+  "name": "hl-primaria-1",
+  "fecha": "2026-11-06",
+  "hora": "09:00",
+  "uso": "Destacada: Primaria",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/hl-idiomas-1.mp4",
+  "poster": "stories-v2/hl-idiomas-1.jpg",
+  "name": "hl-idiomas-1",
+  "fecha": "2026-11-06",
+  "hora": "19:00",
+  "uso": "Destacada: Idiomas",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/hl-idiomas-2.mp4",
+  "poster": "stories-v2/hl-idiomas-2.jpg",
+  "name": "hl-idiomas-2",
+  "fecha": "2026-11-07",
+  "hora": "09:00",
+  "uso": "Destacada: Idiomas",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/hl-aliados-1.mp4",
+  "poster": "stories-v2/hl-aliados-1.jpg",
+  "name": "hl-aliados-1",
+  "fecha": "2026-11-08",
+  "hora": "11:00",
+  "uso": "Destacada: Aliados",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/hl-papas-1.mp4",
+  "poster": "stories-v2/hl-papas-1.jpg",
+  "name": "hl-papas-1",
+  "fecha": "2026-11-08",
+  "hora": "19:00",
+  "uso": "Destacada: Papás",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/hl-vida-1.mp4",
+  "poster": "stories-v2/hl-vida-1.jpg",
+  "name": "hl-vida-1",
+  "fecha": "2026-11-03",
+  "hora": "13:00",
+  "uso": "Destacada: Vida MN",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-03-nueva-web.mp4",
+  "poster": "stories-v2/post-03-nueva-web.jpg",
+  "name": "post-03-nueva-web",
+  "fecha": "2026-11-05",
+  "hora": "17:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-04-papas-presentes.mp4",
+  "poster": "stories-v2/post-04-papas-presentes.jpg",
+  "name": "post-04-papas-presentes",
+  "fecha": "2026-11-07",
+  "hora": "11:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-05-tres-idiomas.mp4",
+  "poster": "stories-v2/post-05-tres-idiomas.jpg",
+  "name": "post-05-tres-idiomas",
+  "fecha": "2026-11-10",
+  "hora": "13:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-06-pedir-informes.mp4",
+  "poster": "stories-v2/post-06-pedir-informes.jpg",
+  "name": "post-06-pedir-informes",
+  "fecha": "2026-11-12",
+  "hora": "17:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-07-buen-fin.mp4",
+  "poster": "stories-v2/post-07-buen-fin.jpg",
+  "name": "post-07-buen-fin",
+  "fecha": "2026-11-13",
+  "hora": "13:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-08-preescolar-reel.mp4",
+  "poster": "stories-v2/post-08-preescolar-reel.jpg",
+  "name": "post-08-preescolar-reel",
+  "fecha": "2026-11-14",
+  "hora": "11:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-09-preguntas-casa.mp4",
+  "poster": "stories-v2/post-09-preguntas-casa.jpg",
+  "name": "post-09-preguntas-casa",
+  "fecha": "2026-11-15",
+  "hora": "18:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-11-aliados.mp4",
+  "poster": "stories-v2/post-11-aliados.jpg",
+  "name": "post-11-aliados",
+  "fecha": "2026-11-19",
+  "hora": "17:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-12-20-noviembre.mp4",
+  "poster": "stories-v2/post-12-20-noviembre.jpg",
+  "name": "post-12-20-noviembre",
+  "fecha": "2026-11-20",
+  "hora": "13:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-13-pregunta-rocio.mp4",
+  "poster": "stories-v2/post-13-pregunta-rocio.jpg",
+  "name": "post-13-pregunta-rocio",
+  "fecha": "2026-11-21",
+  "hora": "11:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-14-valores.mp4",
+  "poster": "stories-v2/post-14-valores.jpg",
+  "name": "post-14-valores",
+  "fecha": "2026-11-23",
+  "hora": "13:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-16-planteles.mp4",
+  "poster": "stories-v2/post-16-planteles.jpg",
+  "name": "post-16-planteles",
+  "fecha": "2026-11-26",
+  "hora": "13:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-17-agenda-visita.mp4",
+  "poster": "stories-v2/post-17-agenda-visita.jpg",
+  "name": "post-17-agenda-visita",
+  "fecha": "2026-11-27",
+  "hora": "11:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-18-cierre-lectura.mp4",
+  "poster": "stories-v2/post-18-cierre-lectura.jpg",
+  "name": "post-18-cierre-lectura",
+  "fecha": "2026-11-29",
+  "hora": "18:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/post-19-informes-reel.mp4",
+  "poster": "stories-v2/post-19-informes-reel.jpg",
+  "name": "post-19-informes-reel",
+  "fecha": "2026-11-30",
+  "hora": "13:45",
+  "uso": "Aviso de post nuevo",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/viernes-informes-1.mp4",
+  "poster": "stories-v2/viernes-informes-1.jpg",
+  "name": "viernes-informes-1",
+  "fecha": "2026-11-06",
+  "hora": "12:00",
+  "uso": "Viernes: Pide informes",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/viernes-informes-2.mp4",
+  "poster": "stories-v2/viernes-informes-2.jpg",
+  "name": "viernes-informes-2",
+  "fecha": "2026-11-13",
+  "hora": "12:00",
+  "uso": "Viernes: Pide informes",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/viernes-informes-3.mp4",
+  "poster": "stories-v2/viernes-informes-3.jpg",
+  "name": "viernes-informes-3",
+  "fecha": "2026-11-20",
+  "hora": "12:00",
+  "uso": "Viernes: Pide informes",
+  "dur": 7
+ },
+ {
+  "file": "stories-v2/viernes-informes-4.mp4",
+  "poster": "stories-v2/viernes-informes-4.jpg",
+  "name": "viernes-informes-4",
+  "fecha": "2026-11-27",
+  "hora": "16:00",
+  "uso": "Viernes: Pide informes",
+  "dur": 7
+ }
+]
