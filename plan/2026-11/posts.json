@@ -1,26 +1,5 @@
 [
  {
-  "slug": "02-reel-recap",
-  "fecha": "2026-11-02",
-  "hora": "16:12",
-  "tipo": "Reel",
-  "pilar": "Vida MN",
-  "estado": "programado",
-  "video": "v/recap.mp4",
-  "caption": "Así se vivió el Día de Muertos en Mi Nación 💀🌼\n\nOfrendas hechas por nuestros alumnos, una presentación inspirada en Michael Jackson y toda la comunidad reunida.\n\nGracias a las familias, alumnos y maestros que lo hicieron posible. 💚\n\n#ColegioMiNación #Coyoacán #Preescolar #Primaria",
-  "nota": "Publicado hoy 2 nov a las 4:12 p. m. Motion graphics a pantalla completa, ofrendas con fotos originales en alta resolución. Música: Güerita, Epidemic Sound."
- },
- {
-  "slug": "01-ofrendas",
-  "fecha": "2026-11-02",
-  "hora": "18:00",
-  "tipo": "Carrusel",
-  "pilar": "Vida MN",
-  "estado": "programado",
-  "caption": "Este Día de Muertos, preescolar y primaria llenaron el colegio de color, memoria y tradición. 🌼\n\nLas familias nos acompañaron a recorrer las ofrendas y los trabajos que prepararon los alumnos para recordar a quienes queremos.\n\nGracias, comunidad Mi Nación, por mantener viva esta tradición con nosotros. 🧡\n\n¿Quieres conocer el colegio? Pide informes por WhatsApp: 56 5292 2720\n\n#ColegioMiNación #DíaDeMuertos #Coyoacán",
-  "nota": "Programado en Metricool con 8 imágenes. Rocío confirma permisos antes de las 6:00 p. m."
- },
- {
   "slug": "03-nueva-web",
   "fecha": "2026-11-05",
   "hora": "17:00",
@@ -84,8 +63,7 @@
   "estado": "listo",
   "n": 1,
   "caption": "Así es nuestro preescolar en Fresno 172, Santa Úrsula Coapa 🌳\n\nUn espacio para jugar, explorar y aprender en tres idiomas.\n\n¿Quieres conocerlo en persona? Agenda tu visita por WhatsApp: 56 5292 2720\n\n#Preescolar #Kinder #ColegioMiNación #Coyoacán #Preescolar #Primaria",
-  "nota": "Versión con fotos del plantel. Se reemplaza con 'Un día en preescolar' cuando haya levantamiento. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound. Música: Happy 4 U, Epidemic Sound.",
-  "video": "v/preescolar.mp4"
+  "nota": "Versión con fotos del plantel. Se reemplaza con 'Un día en preescolar' cuando haya levantamiento."
  },
  {
   "slug": "09-preguntas-casa",
@@ -196,16 +174,5 @@
   "n": 1,
   "caption": "Terminamos noviembre con Hijos felices 📚 Gracias a todas las familias que leyeron con nosotros.\n\nMuy pronto te contamos cuál será la lectura de diciembre. 👀\n\n#PapásPresentes #ColegioMiNación #Coyoacán #Preescolar #Primaria",
   "nota": "Si Rocío confirma Educar con pasión, se anuncia el título."
- },
- {
-  "slug": "19-informes-reel",
-  "fecha": "2026-11-30",
-  "hora": "13:00",
-  "tipo": "Reel",
-  "pilar": "Admisiones",
-  "estado": "programado",
-  "video": "v/informes.mp4",
-  "caption": "¿Quieres información del colegio? Así de fácil la pides desde tu celular 📲\n\n1️⃣ Entra a colegiominacion.com\n2️⃣ Toca «Pedir informes»\n3️⃣ Elige WhatsApp, llamada o formulario\n\nTe contactamos pronto. 💚\n\n#ColegioMiNación #Coyoacán #Preescolar #Primaria",
-  "nota": "Cyber Monday. Música: Pearl City Beach, Epidemic Sound."
  }
 ]
