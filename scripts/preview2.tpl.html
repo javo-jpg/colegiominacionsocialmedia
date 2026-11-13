@@ -104,6 +104,26 @@ button:focus-visible,.tile:focus-visible{outline:3px solid var(--azul);outline-o
 .stw figcaption{font-size:.74rem;color:var(--muted);margin-top:4px;line-height:1.3}
 .stw figcaption b{color:var(--fg);display:block}
 .wk2{font-family:var(--display);font-weight:700;color:var(--ink);margin:18px 0 8px}
+.rev{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin-top:18px}
+.rv{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:10px;min-width:0;align-content:start}
+.rv video{width:100%;aspect-ratio:9/16;border-radius:10px;background:#000;object-fit:cover}
+.rv h3{font-size:1.05rem;color:var(--ink)}
+.rv .meta{font-size:.82rem;color:var(--muted)}
+.rv ul{margin:0;padding-left:18px;font-size:.84rem;color:var(--muted)}
+.rst{display:inline-block;font-size:.74rem;font-weight:700;padding:3px 10px;border-radius:10px;background:var(--chip);color:var(--fg)}
+.rst.ok{background:#DCE5B6;color:#235D4E}.rst.cam{background:#F6D5CB;color:#7A2E1C}
+.rvb{display:grid;gap:8px;border-top:1px dashed var(--line);padding-top:10px}
+.rvs{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0 4px;display:grid;gap:8px;max-width:520px}
+.rvs b{font-family:var(--display);color:var(--ink)}
+.post .rvb textarea,.rvs textarea{width:100%;min-height:56px;font:inherit;font-size:.9rem;border:1px solid var(--line);border-radius:8px;padding:8px;background:var(--bg);color:var(--fg)}
+.rvb .acts{display:flex;gap:8px;flex-wrap:wrap}.rvb .acts .alt{background:var(--coral)}
+.rvb .log,.rvb .msg{font-size:.8rem;color:var(--muted)}
+.rv textarea{width:100%;min-height:64px;font:inherit;font-size:.9rem;border:1px solid var(--line);border-radius:8px;padding:8px;background:var(--bg);color:var(--fg);resize:vertical}
+.rv .acts{display:flex;gap:8px;flex-wrap:wrap}
+.rv .acts .alt{background:var(--coral)}
+.rv .log{font-size:.8rem;color:var(--muted);display:grid;gap:4px}
+.rv .log b{color:var(--fg)}
+.rv .msg{font-size:.8rem;color:var(--muted)}
 footer{padding-block:28px 48px;color:var(--muted);font-size:.85rem}
 @media (max-width:900px){.layout,.lev,.three{grid-template-columns:1fr}.phone{position:static;max-width:440px;margin:0 auto}.slides img,.slides video{height:240px}.slides video{width:135px}}
 @media (prefers-reduced-motion:reduce){.tile img{transition:none}}
@@ -115,6 +135,11 @@ footer{padding-block:28px 48px;color:var(--muted);font-size:.85rem}
   <p>__N__ publicaciones diseñadas con la marca: fotos de las ofrendas y del plantel de preescolar, capturas de la nueva web e ilustraciones. Las que dependen de grabar algo traen portada y guion; abajo están las <a href="#solicitudes" style="color:#EDCC6F">solicitudes de contenido para My Name Is Yellow</a>.</p>
   <div class="legend"><span class="st programado">Programado</span><span class="st material">Listo para programar</span><span class="st confirmar">Confirmar con Rocío</span><span class="st levantamiento">Falta grabar</span></div>
 </div></header>
+<section id="revision"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow">Revisión · material real de My Name Is Yellow</div><h2>Para aprobar</h2><p>Todo lo que viene desde hoy tiene botones de Aprobar / Pedir cambios: estos reels nuevos, cada post y reel del calendario más abajo, y cada semana de stories. Reels nuevos hechos con el material de Armando (grabado el 25 y 26 de marzo). Tienen estabilización, corrección de color, logo discreto en el segundo 5 y cortinilla de cierre con CTA. Aprueben o pidan cambios en cada uno; nada se programa hasta que esté aprobado.</p></div>
+  <div class="rev" id="revgrid">__REVIEW__</div>
+</div></section>
+
 
 <main>
 <section><div class="wrap layout">
@@ -135,7 +160,7 @@ footer{padding-block:28px 48px;color:var(--muted);font-size:.85rem}
 </div></section>
 
 <section id="historias"><div class="wrap">
-  <div class="sec-head"><div class="eyebrow">Historias · 30 programadas en Metricool</div><h2>Historias de noviembre</h2><p>Tres tipos: historias para llenar las destacadas (3 al 8 nov), aviso 45 minutos después de cada post nuevo y un recordatorio de “Pide informes” cada viernes. Después de publicarse, las de destacadas se guardan a mano en su destacada.</p></div>
+  <div class="sec-head"><div class="eyebrow">Historias · 30 programadas en Metricool</div><h2>Historias de noviembre</h2><p>Ahora son historias animadas con música (el preview muestra el primer cuadro). Tres tipos: historias para llenar las destacadas (3 al 8 nov), aviso 45 minutos después de cada post nuevo y un recordatorio de “Pide informes” cada viernes. Después de publicarse, las de destacadas se guardan a mano en su destacada.</p></div>
   __STORIES__
   <div class="card" style="margin-top:18px"><h3>Historias con stickers (se suben desde la app, no se pueden programar)</h3><ul>
     <li><b>Encuesta:</b> “¿Tu hijo ya dice palabras en inglés?” Sí / Todavía no (semana de idiomas, 10 nov).</li>
@@ -145,7 +170,7 @@ footer{padding-block:28px 48px;color:var(--muted);font-size:.85rem}
 </div></section>
 <section id="solicitudes"><div class="wrap">
   <div class="sec-head"><div class="eyebrow">Solicitudes para My Name Is Yellow · Armando Hernández y equipo</div><h2>Contenido que necesitamos de la escuela y los niños</h2>
-  <p>Hoy solo tenemos material de las ofrendas. Cada solicitud dice para qué publicación es, la idea, la lista exacta de tomas y cómo entregarla. Las marcadas como prioridad sostienen piezas ya programadas.</p></div>
+  <p>Hoy solo tenemos material de las ofrendas, y el feed se ve más diseño que escuela. <b>Meta desde diciembre: al menos 2 de cada 3 posts con foto o video real del colegio</b>; el diseño queda como apoyo (marcos, marcas de agua, textos). Para lograrlo necesitamos tres cosas: el archivo que ya existe (S-16), un banco de fotos para portadas en la visita (S-17) y un paquete fijo cada viernes (S-18). Cada solicitud dice para qué publicación es, la idea, la lista exacta de tomas y cómo entregarla. Las marcadas como prioridad sostienen piezas ya programadas.</p></div>
   <div class="rules">
     <div><b>Formato</b><span>Video vertical 4K a 30 fps, tomas de 3 a 5 s con 2 s de colchón. Fotos en 4:5 y horizontales.</span></div>
     <div><b>Audio</b><span>Micrófono de solapa en testimonios. Sin música ni voz en off: la edición la hacemos nosotros.</span></div>
@@ -189,4 +214,44 @@ footer{padding-block:28px 48px;color:var(--muted);font-size:.85rem}
 document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>{const t=document.getElementById(b.dataset.copy).textContent;
 const ok=()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar copy',1500)};
 try{navigator.clipboard.writeText(t).then(ok,()=>{const r=document.createRange();r.selectNodeContents(document.getElementById(b.dataset.copy));getSelection().removeAllRanges();getSelection().addRange(r)})}catch(e){}}));
+</script>
+
+<script>
+(async()=>{
+  const cards=[...document.querySelectorAll('.rv')];
+  const setMsg=(c,m)=>{c.querySelector('.msg').textContent=m};
+  cards.forEach(c=>setMsg(c,'Cargando estado…'));
+  let db=null,user=null;
+  try{db=await claude.use("db");user=await claude.use("user")}catch(e){}
+  if(!db){cards.forEach(c=>{setMsg(c,'Abre este link con tu cuenta de claude.ai para aprobar o comentar.');c.querySelectorAll('button,textarea').forEach(x=>x.disabled=true)});return}
+  let me=null;try{me=await user?.id()}catch(e){}
+  const col=db.collection("revision");
+  let names={};
+  const render=async(rows)=>{
+    const ids=[...new Set(rows.map(r=>r.por).filter(Boolean))];
+    try{if(user&&ids.length){const ps=await user.profiles(ids);ids.forEach(i=>names[i]=(ps[i]&&ps[i].name)||'Alguien')}}catch(e){}
+    cards.forEach(c=>{
+      const id=c.dataset.id, mine=rows.filter(r=>r.pieza===id).sort((a,b)=>(b.fecha||0)-(a.fecha||0));
+      const st=c.querySelector('.rst'), last=mine[0];
+      st.className='rst'+(last?(last.estado==='aprobado'?' ok':' cam'):'');
+      st.textContent=last?(last.estado==='aprobado'?'Aprobado':'Pidieron cambios'):'Pendiente';
+      const log=c.querySelector('.log');log.replaceChildren();
+      mine.forEach(r=>{const d=document.createElement('div');const b=document.createElement('b');b.textContent=(names[r.por]||'Alguien')+' · '+(r.estado==='aprobado'?'aprobó':'pidió cambios');d.append(b);if(r.nota){d.append(document.createTextNode(': '+r.nota))};const s=document.createElement('span');s.textContent=' ('+new Date(r.fecha).toLocaleString('es-MX',{dateStyle:'short',timeStyle:'short'})+')';d.append(s);log.append(d)});
+      setMsg(c,'');
+    });
+  };
+  const timer=setTimeout(()=>cards.forEach(c=>setMsg(c,'No se pudo cargar el estado. Recarga la página.')),10000);
+  col.onSnapshot(s=>{clearTimeout(timer);render(s.docs.map(d=>d.data()))},e=>{clearTimeout(timer);cards.forEach(c=>setMsg(c,'No se pudo cargar el estado.'))});
+  cards.forEach(c=>{
+    const ta=c.querySelector('textarea');
+    c.querySelectorAll('button[data-e]').forEach(b=>b.addEventListener('click',async()=>{
+      const estado=b.dataset.e, nota=ta.value.trim();
+      if(estado==='cambios'&&!nota){setMsg(c,'Escribe qué cambiarías.');ta.focus();return}
+      c.querySelectorAll('button').forEach(x=>x.disabled=true);setMsg(c,'Guardando…');
+      try{await col.add({pieza:c.dataset.id,estado,nota,por:me||null,fecha:Date.now()});ta.value='';setMsg(c,'Guardado.')}
+      catch(e){setMsg(c,e&&e.code==='not_granted'||e&&e.code==='permission_denied'?'Tu acceso es solo de lectura; pide acceso de edición.':'No se pudo guardar.')}
+      finally{c.querySelectorAll('button').forEach(x=>x.disabled=false)}
+    }));
+  });
+})();
 </script>
